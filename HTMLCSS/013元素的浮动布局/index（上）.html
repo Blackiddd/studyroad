@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>浮动布局</title>
+  </head>
+  <style>
+    .green {
+      width: 100px;
+      height: 100px;
+      background-color: green;
+      float: left;
+    }
+    .red {
+      width: 200px;
+      height: 150px;
+      background-color: red;
+    }
+    .a {
+      width: 20%;
+      background-color: green;
+    }
+    .b {
+      width: 60%;
+      background-color: red;
+    }
+    .c {
+      width: 20%;
+      background-color: blue;
+    }
+    .a,
+    .b,
+    .c {
+      float: left;
+      height: 200px;
+    }
+    .d {
+      height: 300px;
+      background-color: deepskyblue;
+    }
+    .outer {
+      border: dashed;
+      height: 200px;
+    }
+  </style>
+  <body>
+    <p>文字环绕效果</p>
+    <div class="green"></div>
+    <div class="red">
+      文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕文字环绕
+    </div>
+
+    <p>横向排版布局</p>
+    <div class="outer">
+      <div class="a"></div>
+      <div class="b"></div>
+      <div class="c"></div>
+    </div>
+
+    <div class="d"></div>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    var arr = [4, 2, 8, 1, 0];
+    for (var i = 0; i <= arr.length - 1; i++) {
+      for (var j = 0; j <= arr.length - i - 1; j++) {
+        if (arr[j] > arr[j + 1]) {
+          var temp = arr[j + 1];
+          arr[j + 1] = arr[j];
+          arr[j] = temp;
+        }
+      }
+    }
+    console.log(arr);
+    var arr1 = [6, 3, 7, 2, 8];
+    arr1.sort();
+    console.log(arr1);
+    var arr2 = [11, 63, 176, 34, 22, 97];
+    arr2.sort(function (a, b) {
+      return a - b; //升序
+    });
+    console.log(arr2);
+  </script>
+  <body></body>
+</html>

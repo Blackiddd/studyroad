@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set集合和API</title>
+  </head>
+  <body>
+    <script>
+      let s = new Set();
+      let s2 = new Set(["a", "b", "c", "b"]); //自动删除重复
+      //添加
+      s2.add("d");
+      //删除
+      s2.delete("a");
+      //   检测
+      let check = s2.has("b");
+      console.log(check);
+      console.log(s2);
+      //遍历
+      for (const v of s2) {
+        console.log(v);
+      }
+      //清空
+      s2.clear();
+      console.log(s2);
+    </script>
+  </body>
+</html>

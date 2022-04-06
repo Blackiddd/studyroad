@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>吃喝玩乐</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0px;
+    }
+    img {
+      vertical-align: middle;
+    }
+    input,
+    button {
+      border: none;
+    }
+    html {
+      font-size: 10px;
+      background-color: #f6f6f6;
+    }
+
+    header {
+      height: 9rem;
+      background-color: black;
+      display: flex;
+      justify-content: space-between;
+    }
+    header div:nth-child(1) {
+      text-align: center;
+      width: 6rem;
+    }
+    header div:nth-child(2) {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      margin: 0 5rem;
+    }
+    header div:nth-child(2) .options {
+      background-color: white;
+      display: flex;
+      height: 4rem;
+      padding: 1rem 1rem 1rem 4rem;
+      border-right: solid 0.1rem #aaa;
+      border-top-left-radius: 3rem;
+      border-bottom-left-radius: 3rem;
+      align-items: center;
+      line-height: 4rem;
+      font-size: 2.6rem;
+    }
+    header div:nth-child(2) .options span:nth-child(2) {
+      background-image: url(img/more.png);
+      background-repeat: no-repeat;
+      width: 1.5rem;
+      height: 3rem;
+      margin-top: 3rem;
+    }
+    header div:nth-child(2) .input-wrapper {
+      flex-grow: 1;
+    }
+    header div:nth-child(2) .input-wrapper input {
+      border-top-right-radius: 3rem;
+      border-bottom-right-radius: 3rem;
+      height: 6rem;
+      width: 100%;
+      font-size: 2.6rem;
+      box-sizing: border-box;
+      padding-left: 2.6rem;
+    }
+    header div:nth-child(3) {
+      width: 9rem;
+      line-height: 9rem;
+      color: #ccc;
+      font-size: 3.2rem;
+      text-align: center;
+    }
+
+    p.search-history {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 9rem;
+      background-color: white;
+      line-height: 9rem;
+      align-items: center;
+      border-bottom: #ccc solid 0.3rem;
+    }
+    p.search-history img {
+      height: 3rem;
+    }
+    p.search-history span:nth-child(1) {
+      font-size: 2.8rem;
+      color: #888;
+    }
+    .search-history-items {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2.8rem 0;
+      justify-content: space-between;
+      background-color: white;
+    }
+    .search-history-items::after {
+      content: "";
+      display: block;
+      flex-grow: 1;
+    }
+    .search-history-items span {
+      color: #555;
+      background-color: #f2f2f2;
+      font-size: 2.4rem;
+      padding: 1rem 2.2rem;
+      border-radius: 2.8rem;
+      margin: 0 1.1rem 2.8rem;
+    }
+    .search-history-items span:hover {
+      cursor: pointer;
+    }
+
+    p.favorite {
+      font-size: 3.2rem;
+      text-align: center;
+      height: 9rem;
+      line-height: 9rem;
+      color: #f07a1a;
+      font-weight: bolder;
+      background-color: white;
+      margin-top: 10rem;
+      position: relative;
+    }
+    p.favorite::after {
+      content: "";
+      display: block;
+      width: 70rem;
+      height: 0.1rem;
+      background-color: #bbb;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    .favorite-items {
+      background-color: white;
+      padding-bottom: 7.5rem;
+    }
+    .favorite-items p {
+      padding: 3rem 0 0;
+      display: flex;
+      justify-content: center;
+    }
+    .favorite-items p span {
+      border: solid 1px #aaa;
+      padding: 0.8rem 1.3rem;
+      border-radius: 5rem;
+      font-size: 2.4rem;
+      margin: 0 0.8rem;
+      color: #666;
+    }
+    .favorite-items p span:hover {
+      cursor: pointer;
+    }
+    .confirm {
+      background-color: white;
+      text-align: center;
+      padding-bottom: 3rem;
+      margin-bottom: 18rem;
+    }
+    .confirm .confirm-button {
+      width: 20rem;
+      height: 8rem;
+      border-radius: 4rem;
+      background-color: orange;
+      color: white;
+      font-size: 3rem;
+      line-height: 8rem;
+    }
+    .confirm .confirm-button:hover {
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <header>
+      <div>
+        <img src="img/back.png" alt="" height="90px" />
+      </div>
+      <div>
+        <p class="options">
+          <span>店铺</span>
+          <span></span>
+        </p>
+        <p class="input-wrapper">
+          <input type="text" placeholder="搜索美食/店铺" />
+        </p>
+      </div>
+      <div>取消</div>
+    </header>
+
+    <p class="search-history">
+      <span>历史搜索</span>
+      <img src="img/delete.png" alt="" class="delete-icon" />
+    </p>
+    <section class="search-history-items">
+      <span>火锅</span>
+      <span>串串</span>
+      <span>烤肉</span>
+      <span>自助餐</span>
+      <span>KTV</span>
+      <span>锅包肉</span>
+      <span>东北菜</span>
+      <span>麻辣烫</span>
+      <span>酒吧</span>
+      <span>剧本杀</span>
+      <span>奶茶</span>
+    </section>
+
+    <p class="favorite">直接选择我喜欢的</p>
+    <section class="favorite-items">
+      <p>
+        <span>牛排</span>
+        <span>涮羊肉</span>
+        <span>烧仙草</span>
+        <span>铁锅炖</span>
+        <span>烧烤</span>
+        <span>海鲜</span>
+        <span>漂流</span>
+      </p>
+      <p>
+        <span>火锅</span>
+        <span>烤肉</span>
+        <span>咖啡</span>
+        <span>烤鸭</span>
+        <span>粤菜</span>
+        <span>游乐场</span>
+        <span>网咖</span>
+      </p>
+      <p>
+        <span>纹身</span>
+        <span>真人CS</span>
+        <span>酒吧</span>
+        <span>livehouse</span>
+        <span>猫咖</span>
+        <span>卡丁车</span>
+        <span>电玩</span>
+        <span>密室逃脱</span>
+      </p>
+    </section>
+
+    <p class="confirm">
+      <button class="confirm-button">确定</button>
+    </p>
+  </body>
+</html>

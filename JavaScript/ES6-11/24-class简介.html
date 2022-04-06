@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class</title>
+  </head>
+  <body>
+    <script>
+      //   //ES5
+      //   function person(name, age) {
+      //     this.name = name;
+      //     this.age = age;
+      //   }
+      //   //添加方法
+      //   person.prototype.eat = function () {
+      //     console.log("我要吃饭！！！");
+      //   };
+
+      //   //实例化对象
+      //   let dbw = new person("blackid", "23");
+      //   dbw.eat();
+      //   console.log(dbw);
+
+      //class
+      class person {
+        //构造方法 名字不能修改
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+        eat() {
+          console.log("我好能吃！！！");
+        }
+      }
+      let dbw = new person("blackid", "23");
+      console.log(dbw);
+      dbw.eat();
+    </script>
+  </body>
+</html>

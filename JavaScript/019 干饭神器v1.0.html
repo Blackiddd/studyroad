@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>干饭神奇V1.0</title>
+  </head>
+  <script>
+    var dinner = new Array(1);
+
+    function getRandom(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    } //随机函数
+
+    for (var i = 0; i <= 10; i++) {
+      var ans = prompt("请输入xdm的干饭选择，完成后请输入ok");
+      if (ans == "ok") {
+        var decide = dinner[getRandom(0, i)];
+        alert("决定了！今晚吃" + decide);
+        console.log("决定了！今晚吃" + decide);
+        break;
+      } else {
+        dinner[i] = ans;
+        console.log(dinner[i]);
+      }
+    }
+  </script>
+  <body></body>
+</html>

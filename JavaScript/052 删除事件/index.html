@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: palegreen;
+      text-align: center;
+      line-height: 100px;
+      border-bottom: 1px solid black;
+    }
+    div:nth-child(3) {
+      border-bottom: 0px;
+    }
+  </style>
+  <body>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </body>
+
+  <script>
+    var divs = document.querySelectorAll("div");
+    //传统方式删除事件
+    divs[0].onclick = function () {
+      alert("11");
+      divs[0].onclick = null;
+    };
+    // 监听注册方式
+    divs[1].addEventListener("click", fn);
+    function fn() {
+      alert("22");
+      divs[1].removeEventListener("click", fn);
+    }
+    //attachEvent
+    divs[2].attachEvent("onclick", fn);
+    function fn() {
+      alert("33");
+      divs[2].detachEvent("onclick", fn);
+    }
+  </script>
+</html>

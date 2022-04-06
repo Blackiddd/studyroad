@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 表达式和case里匹配时是 全等
+      // 如果没有break不会退出，会继续执行下一个case
+      /*       switch(表达式){
+              case value1:
+                    执行语句1；
+                    break；
+              case value2:
+                    执行语句2；
+                    break；
+              ...
+              default:
+                  执行最后的语句；
+            } */
+
+      var fruit = prompt("请输入想要查询的水果");
+      switch (fruit) {
+        case "苹果":
+          alert("苹果的价格是3.5￥/斤");
+          break;
+        case "香蕉":
+          alert("香蕉的价格是1￥/斤");
+          break;
+        case "榴莲":
+          alert("榴莲的价格是40￥/斤");
+          break;
+        default:
+          alert("没有此水果");
+      }
+    </script>
+  </head>
+  <body></body>
+</html>

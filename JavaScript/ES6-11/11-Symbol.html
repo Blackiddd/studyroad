@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>symbol</title>
+  </head>
+  <body>
+    <script>
+      //symbol特点
+      //1.值是唯一的，且不能与其他数据进行运算
+      //2.symbol定义的对象不能用for in遍历，可以用Reflect.ownKeys获取对象的所有键名
+      //symbol 创建
+      let s = Symbol();
+      let s1 = Symbol("这里面相当于注释");
+      let s2 = Symbol("这里面相当于注释");
+      console.log(s1 === s2);
+      let s3 = Symbol.for("这里面相当于注释");
+      let s4 = Symbol.for("这里面相当于注释");
+      console.log(s3 === s4);
+    </script>
+  </body>
+</html>

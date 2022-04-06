@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      width: 600px;
+      margin: 100px auto;
+    }
+    .message {
+      display: inline-block;
+      font-size: 12px;
+      color: #999;
+      padding-left: 20px;
+    }
+    .wrong {
+      color: red;
+    }
+    .right {
+      color: green;
+    }
+  </style>
+  <body>
+    <div class="register">
+      <input type="passward" class="ipt" />
+      <p class="message">请输入6~16位密码</p>
+    </div>
+    <script>
+      // 判断是失去焦点事件
+      // 用className修改提示文字样式
+      var ipt = document.querySelector(".ipt");
+      var message = document.querySelector(".message");
+      ipt.onblur = function () {
+        if (this.value.length < 6 || this.value.length > 16) {
+          message.className = "message wrong";
+          message.innerHTML = "您输入的密码不符合6~16位要求";
+        } else {
+          message.className = "message right";
+          message.innerHTML = "该密码可以使用";
+        }
+      };
+    </script>
+  </body>
+</html>

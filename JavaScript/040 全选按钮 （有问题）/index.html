@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    table {
+      margin: 300px auto;
+    }
+    th {
+      background-color: darkcyan;
+    }
+    td {
+      background-color: beige;
+    }
+  </style>
+  <body>
+    <table>
+      <thead>
+        <tr>
+          <th><input type="checkbox" name="" id="" /></th>
+          <th>商品</th>
+          <th>价钱</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><input type="checkbox" name="" id="" /></td>
+          <td>iPhone 13</td>
+          <td>8000</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="" id="" /></td>
+          <td>iPad pro</td>
+          <td>7000</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="" id="" /></td>
+          <td>Mac pro</td>
+          <td>12000</td>
+        </tr>
+        <tr>
+          <td><input type="checkbox" name="" id="" /></td>
+          <td>airpods pro</td>
+          <td>2000</td>
+        </tr>
+      </tbody>
+    </table>
+    <script>
+      var checkall = document.querySelector("th").querySelector("input");
+      var c_box = document.querySelector("tbody").querySelectorAll("input");
+
+      checkall.onclick = function () {
+        for (var i = 0; i < c_box.length; i++) {
+          c_box[i].checked = checkall.checked;
+        }
+      };
+
+      for (var i = 0; i < c_box.length; i++) {
+        c_box[i].onclick = function () {
+          var flag = true;
+          for (var i = 0; i < c_box.length; i++) {
+            if (!c_box[i].checked) {
+              // 为什么不能用 c_box[i].checked = false 啊
+              flag = false;
+              break;
+            }
+          }
+          checkall.checked = flag;
+        };
+      }
+    </script>
+  </body>
+</html>

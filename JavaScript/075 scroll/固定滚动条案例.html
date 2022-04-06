@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 5000px;
+      width: 100%;
+      position: relative;
+      background-color: antiquewhite;
+    }
+    .slide-nav {
+      position: absolute;
+      top: 150px;
+      right: 50px;
+      background-color: #ccc;
+      width: 100px;
+      height: 300px;
+    }
+    .header {
+      height: 100px;
+      background-color: aquamarine;
+    }
+    .banner {
+      height: 100px;
+      background-color: pink;
+    }
+    .main {
+      height: 100px;
+      background-color: greenyellow;
+    }
+    .slider-bar {
+      display: none;
+      height: 100px;
+      width: 50px;
+      background-color: red;
+      position: absolute;
+      right: 0;
+      top: 350px;
+      line-height: 50px;
+      text-align: center;
+      writing-mode: vertical-lr;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="slide-nav">
+      <div class="header">头部区域</div>
+      <div class="banner">banner区域</div>
+      <div class="main">主体部分</div>
+    </div>
+    <div class="slider-bar">
+      <span class="goBack">返回顶部</span>
+    </div>
+
+    <script>
+      // window.pageYOffset 页面被卷去的头部
+      // Element.scrollTop 元素内被卷去
+      var sliderbar = document.querySelector(".slider-bar");
+      var slidenav = document.querySelector(".slide-nav");
+      var slidenavTop = slidenav.offsetTop;
+      var headerTop = document.addEventListener("scroll", function () {
+        console.log(window.pageYOffset);
+        if (window.pageYOffset >= slidenavTop) {
+          sliderbar.style.display = "block";
+          sliderbar.style.position = "fixed";
+          slidenav.style.position = "fixed";
+        } else {
+          sliderbar.style.display = "none";
+          slidenav.style.position = "absolute";
+        }
+      });
+      sliderbar.addEventListener("click", function () {
+        animate(window, 0);
+        // window.scroll(0, 0); 瞬间回到指定位置
+      });
+
+      //滚动回到指定位置，把animate函数中与左右有关的值改为上下
+      function animate(obj, target, callback) {
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function () {
+          var step = (target - window.pageYOffset) / 10;
+          step = step > 0 ? Math.ceil(step) : Math.floor(step);
+          //整数
+          if (window.pageYOffset == target) {
+            clearInterval(obj.timer);
+            if (callback) {
+              callback();
+            }
+          } else {
+            // obj.style.left = window.pageYOffset + step + "px";
+            window.scroll(0, window.pageYOffset + step);
+          }
+        }, 10);
+      }
+    </script>
+  </body>
+</html>

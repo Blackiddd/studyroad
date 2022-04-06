@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>立方体</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    #cube {
+      margin: 100px auto;
+      width: 300px;
+      height: 300px;
+      border: 1px dashed black;
+      perspective: 800px;
+      transition: 2s;
+    }
+    #cube:hover {
+      perspective: none;
+      transform: rotateY(-45deg) rotateX(-45deg);
+      transform-style: preserve-3d;
+    }
+    #cube p {
+      font-size: 100px;
+    }
+    #cube div {
+      width: 300px;
+      height: 300px;
+      border: 1px solid black;
+      margin: auto;
+      text-align: center;
+      line-height: 300px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      opacity: 0.9;
+    }
+    #cube .flat1 {
+      background-color: red;
+      transform: translateY(-150px) rotateX(90deg);
+    }
+
+    #cube .flat2 {
+      background-color: orange;
+      transform: translateY(150px) rotateX(-90deg);
+    }
+    #cube .flat3 {
+      background-color: yellow;
+      transform: translateX(-150px) rotateY(-90deg);
+    }
+    #cube .flat4 {
+      background-color: green;
+      transform: translateX(150px) rotateY(90deg);
+    }
+    #cube .flat5 {
+      background-color: cyan;
+      transform: translateZ(-150px);
+    }
+    #cube .flat6 {
+      background-color: purple;
+      transform: translateZ(150px);
+    }
+  </style>
+  <body>
+    <div id="cube">
+      <div class="flat1">
+        <p>1</p>
+      </div>
+      <div class="flat2">
+        <p>2</p>
+      </div>
+      <div class="flat3">
+        <p>3</p>
+      </div>
+      <div class="flat4">
+        <p>4</p>
+      </div>
+      <div class="flat5">
+        <p>5</p>
+      </div>
+      <div class="flat6">
+        <p>6</p>
+      </div>
+    </div>
+  </body>
+</html>

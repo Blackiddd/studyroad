@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+      color: #000;
+    }
+    ul {
+      list-style: none;
+    }
+    .nav ul li {
+      float: left;
+      padding-right: 20px;
+    }
+    .nav {
+      height: 40px;
+      line-height: 40px;
+      position: relative;
+    }
+    .cloud {
+      display: block;
+      width: 80px;
+      height: 40px;
+      left: 0;
+      top: 0;
+      background: url(cloud.png) no-repeat;
+      position: absolute;
+      z-index: -1;
+    }
+  </style>
+  <script src="../076 动画函数/animate.js"></script>
+  <body>
+    <div class="nav">
+      <span class="cloud"></span>
+      <ul>
+        <li><a href="#">首页新闻</a></li>
+        <li><a href="#">活动策划</a></li>
+        <li><a href="#">企业文化</a></li>
+        <li><a href="#">招聘信息</a></li>
+        <li><a href="#">公司简介</a></li>
+        <li><a href="#">我是佩奇</a></li>
+        <li><a href="#">啥是佩奇 </a></li>
+      </ul>
+    </div>
+
+    <script>
+      //1 鼠标经过某个li,筋斗云跟随到当前li
+      //2 鼠标离开li，筋斗云回到原来位置
+      //3 鼠标点击某个li，筋斗云留在这个li
+      var cloud = document.querySelector(".cloud");
+      var nav = document.querySelector(".nav");
+      var lis = nav.querySelectorAll("li");
+      var current = 0;
+      for (var i = 0; i < lis.length; i++) {
+        lis[i].addEventListener("mouseover", function () {
+          animate(cloud, this.offsetLeft);
+        });
+        lis[i].addEventListener("mouseout", function () {
+          animate(cloud, current);
+        });
+        lis[i].addEventListener("click", function () {
+          current = this.offsetLeft;
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      //Date是构造函数，要用new
+      //如果没有参数，返回当前系统时间，参数可以跟 数字型：2021，01，06(月份为0-11，记得加1，日期不会) 或字符串'2021-1-6 21：50：50'
+      var date = new Date();
+      console.log(date.getFullYear());
+      console.log(date.getMonth() + 1);
+      console.log(date.getDate());
+      console.log(date.getDay()); //周一~六，返回1~6，周日返回 0
+      //格式化日期、
+      var year = date.getFullYear();
+      var month = date.getMonth() + 1;
+      var dates = date.getDate();
+      var dayIndex = date.getDay();
+      var day = [
+        "星期日",
+        "星期一",
+        "星期二",
+        "星期三",
+        "星期四",
+        "星期五",
+        "星期六",
+      ];
+      var hour = date.getHours();
+      var minute = date.getMinutes();
+      var second = date.getSeconds();
+      //获得Date的总毫秒数(时间戳）：距离1970.1.1过了多少毫秒  valueOf（） getTime（）或简单写法
+      console.log(date.valueOf());
+      console.log(date.getTime());
+      var ms = +new Date();
+      //H5新增
+      console.log(Date.now());
+      console.log(
+        "现在是" +
+          year +
+          "年" +
+          month +
+          "月" +
+          dates +
+          "日" +
+          day[dayIndex] +
+          hour +
+          "时" +
+          minute +
+          "分" +
+          second +
+          "秒" +
+          ms
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

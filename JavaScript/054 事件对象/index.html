@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>123456</div>
+    <ul>
+      <li>123</li>
+      <li>123</li>
+      <li>123</li>
+    </ul>
+    <p>abc</p>
+    <a href="http://www.baidu.com">百度</a>
+    <form action="http://www.baidu.com">
+      <input type="submit" value="提交" name="sub" />
+    </form>
+    <script>
+      var div = document.querySelector("div");
+      //   div.onclick = function (event) {
+      //     console.log(event);
+      //   };
+      div.addEventListener("click", function (event) {
+        console.log(event);
+        console.log(event.target); //触发事件的对象
+        console.log(this); //绑定事件的对象
+      });
+
+      var ul = document.querySelector("ul");
+      ul.addEventListener("click", function (event) {
+        console.log(event.target);
+        console.log(this);
+      });
+
+      //返回事件类型
+      var p = document.querySelector("p");
+      p.addEventListener("click", fn);
+      p.addEventListener("mouseover", fn);
+      p.addEventListener("mouseleave", fn);
+      function fn(e) {
+        console.log(e.type); //返回事件类型
+      }
+
+      //阻止默认行为（事件）：让链接不跳转，让提交不提交
+      var a = document.querySelector("a");
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+      });
+    </script>
+  </body>
+</html>

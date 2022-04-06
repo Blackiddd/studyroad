@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>正则扩展-命名捕获分组</title>
+  </head>
+  <body>
+    <script>
+      let str = '<a href="http://www.baidu.com">百度</a> ';
+      //没有分组
+      //提取url与标签文本
+      const reg1 = /<a href="(.*)">(.*)<\/a>/;
+      //执行
+      const result1 = reg1.exec(str);
+      console.log(result1);
+      console.log(result1[0]);
+      console.log(result1[1]);
+      console.log(result1[2]);
+
+      console.log("--------------------------");
+      //分组
+
+      const reg2 = /<a href="(?<url>.*)">(?<text>.*)<\/a>/; //有group
+      const result2 = reg2.exec(str);
+      console.log(result2);
+    </script>
+  </body>
+</html>

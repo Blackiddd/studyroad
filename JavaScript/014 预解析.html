@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    //1.预解析 js引擎会把js里所有的var和function提升到当前作用域最前面
+    //（1）变量预解析（变量提升），会把所有的变量 声明 提升到当前作用域最前面，不提升赋值操作
+    //（2）函数提升，把所有的函数声明提升到作用域前面，不调用函数
+    //2.代码执行，从上往下执行
+    f1();
+    console.log(c);
+    console.log(b);
+    console.log(a);
+
+    function f1() {
+      var a = (b = c = 9); //相当于var a = 9;b = 9; c = 9,b c 前面没有var
+      console.log(a);
+      console.log(b);
+      console.log(c);
+    }
+    //相当于执行了以下代码
+    /*     function f1() {
+      var a ;
+      a = b = c = 9;
+      console.log(a);
+      console.log(b);
+      console.log(c);
+    }
+    f1(); //9,9,9
+    console.log(c);//9
+    console.log(b);//9
+    console.log(a);//not defined */
+  </script>
+  <body></body>
+</html>

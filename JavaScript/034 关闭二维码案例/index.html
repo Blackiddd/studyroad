@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .box {
+      margin-top: 200px;
+      text-align: center;
+    }
+    .box img {
+      position: relative;
+    }
+    .box p {
+      border: solid 1px orangered;
+      font-size: 24px;
+      line-height: 24px;
+      width: 24px;
+      height: 24px;
+      position: absolute;
+      top: 195px;
+      left: 320px;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="box">
+      <img src="img/code.png" alt="" />
+      <p class="close-btn">×</p>
+    </div>
+    <script>
+      var box = document.querySelector("div");
+      var btn = document.querySelector("p");
+      btn.onclick = function () {
+        box.style.display = "none";
+      };
+    </script>
+  </body>
+</html>

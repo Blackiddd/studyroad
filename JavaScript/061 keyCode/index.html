@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" / >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      document.addEventListener("keydown", function (e) {
+        console.log(e.key);
+        console.log("down:" + e.keyCode); //keyup keydown 不区分大小写，keypress区分
+      });
+      document.addEventListener("keypress", function (e) {
+        console.log("press:" + e.keyCode);
+      });
+    </script>
+  </body>
+</html>

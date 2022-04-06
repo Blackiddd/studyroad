@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>办卡嘛</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    form {
+      background: palegoldenrod;
+      width: 400px;
+      margin: 20px auto;
+      padding: 5px 15px;
+      border-radius: 10px;
+    }
+    .step {
+      margin: 10px 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+    .form-line {
+      border: white 2px solid;
+      border-radius: 5px;
+      background-color: olive;
+      margin: 3px 0;
+      padding: 3px;
+      padding-left: 10px;
+    }
+    .form-line span {
+      display: inline-block;
+      width: 130px;
+    }
+    .form-line input {
+      background-color: white;
+      border: none;
+      height: 20px;
+      width: 180px;
+      border-radius: 5px;
+      outline: none;
+      /*选中时没有外面一圈框*/
+    }
+    .form-line input[type="radio"] {
+      width: 25px;
+      height: 12px;
+    }
+    .form-line textarea {
+      background-color: white;
+      border: none;
+      height: 80px;
+      width: 180px;
+      border-radius: 5px;
+      vertical-align: middle;
+      resize: vertical;
+      /*垂直方向改变大小*/
+      outline: none;
+    }
+    .sub-btn {
+      display: block;
+      width: 100px;
+      height: 30px;
+      margin: 10px auto;
+      border: none;
+      border-radius: 15px;
+      background-color: black;
+      color: white;
+      cursor: pointer;
+      /*小手*/
+    }
+  </style>
+  <body>
+    <form action="">
+      <section>
+        <p class="step">第一步，详细信息</p>
+        <p class="form-line">
+          <span>姓名</span>
+          <input type="text" placeholder="请输入姓名" />
+        </p>
+        <p class="form-line">
+          <span>电话</span>
+          <input type="number" placeholder="请输入电话" />
+        </p>
+        <p class="form-line">
+          <span>facebook主页</span>
+          <input type="url" />
+        </p>
+      </section>
+      <section>
+        <p class="step">第二步，收货地址</p>
+        <p class="form-line">
+          <span>详细地址</span>
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="不会泄露您的地址"
+          ></textarea>
+        </p>
+        <p class="form-line">
+          <span>邮编</span>
+          <input type="email" />
+        </p>
+      </section>
+      <section>
+        <p class="step">第三步，银行卡信息</p>
+        <p class="form-line">
+          <span>银行卡类型</span>
+          <input type="radio" name="card" />借记卡
+          <input type="radio" name="card" />信用卡
+          <input type="radio" name="card" />VISA卡
+        </p>
+        <p class="form-line">
+          <span>卡号</span>
+          <input type="number" />
+        </p>
+        <p class="form-line">
+          <span>密码</span>
+          <input type="password" />
+        </p>
+        <p class="form-line">
+          <span>持卡人</span>
+          <input type="text" />
+        </p>
+      </section>
+      <p>
+        <input type="submit" class="sub-btn" value="提交" />
+      </p>
+    </form>
+  </body>
+</html>

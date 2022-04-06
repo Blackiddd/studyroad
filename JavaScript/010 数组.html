@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    //   利用new创建新数组
+    // var arr = new Array();
+    // 利用[],索引号0，1，2
+    var arr = [1, 2, "love"];
+    console.log(arr);
+    console.log(arr[2]);
+    // 求最大值
+    console.log("--------------------------------------------------");
+    var arr1 = [2, 6, 1, 77, 520, 25, 7];
+    var max = arr1[0];
+    for (var i = 1; i < arr1.length; i++) {
+      if (max < arr1[i]) {
+        max = arr1[i];
+      }
+    }
+    console.log("该数组中最大值为" + max);
+    console.log("--------------------------------------------------");
+    // 数组中新增元素-修改length长度
+    var arr2 = ["red", "green", "blue"];
+    arr2.length = 5;
+    console.log(arr2);
+    // 数组中新增元素-修改索引号
+    arr2[3] = "pink";
+    arr2[4] = "yellow";
+    arr2[5] = "white";
+    arr2[0] = "purple";
+    console.log(arr2);
+  </script>
+  <body></body>
+</html>

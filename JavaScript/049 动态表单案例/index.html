@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    table {
+      margin: 100px auto;
+      text-align: center;
+      border-collapse: collapse;
+    }
+    th {
+      background-color: darkgray;
+      padding: 10px 50px;
+      border: 1px solid black;
+    }
+    td {
+      background-color: whitesmoke;
+      padding: 10px 50px;
+      border: 1px solid black;
+    }
+  </style>
+  <body>
+    <table cellspacing="'0">
+      <thead>
+        <tr>
+          <th>姓名</th>
+          <th>科目</th>
+          <th>分数</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>dbw</td>
+          <td>JS</td>
+          <td>99</td>
+          <td><a href="javascript:;">删除</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script>
+      //准备好数据
+      var datas = [
+        {
+          name: "张三",
+          subject: "JS",
+          score: "96",
+        },
+        {
+          name: "李四",
+          subject: "JS",
+          score: "37",
+        },
+        {
+          name: "王二麻子",
+          subject: "JS",
+          score: "75",
+        },
+        {
+          name: "蒜头王八",
+          subject: "JS",
+          score: "79",
+        },
+      ];
+      //创建行
+      var tbody = document.querySelector("tbody");
+      for (var i = 0; i < datas.length; i++) {
+        //行数
+        var tr = document.createElement("tr");
+        tbody.appendChild(tr);
+        //列数
+        for (var k in datas[i]) {
+          var td = document.createElement("td");
+          //把属性值给td
+          td.innerHTML = datas[i][k];
+          tr.appendChild(td);
+        }
+        //创建删除
+        var td = document.createElement("td");
+        td.innerHTML = '<a href="javascript:;">删除</a>';
+        tr.appendChild(td);
+      }
+      // 删除操作
+      var as = document.querySelectorAll("a");
+      for (var i = 0; i < as.length; i++) {
+        as[i].onclick = function () {
+          tbody.removeChild(this.parentNode.parentNode);
+        };
+      }
+    </script>
+  </body>
+</html>

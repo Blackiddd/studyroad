@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+    }
+    .father {
+      width: 100px;
+      height: 100px;
+      background-color: aquamarine;
+      position: absolute;
+    }
+    .son {
+      margin: auto;
+      text-align: center;
+      line-height: 50px;
+      width: 50px;
+      height: 50px;
+      background-color: plum;
+      position: relative;
+      top: 25px;
+    }
+  </style>
+  <body>
+    <div class="father">
+      <div class="son">son</div>
+    </div>
+
+    <script>
+      var father = document.querySelector(".father");
+      var son = document.querySelector(".son");
+      // addEventListener 为flase或空，是冒泡阶段 son->father->body->html->document
+      // onblur onfocus onmouseenter onmouseleave 没有冒泡
+
+      //   father.addEventListener("click", function () {
+      //     alert("11");
+      //   });
+      //   son.addEventListener("click", function () {
+      //     alert("22");
+      //   });
+
+      // true 为捕获阶段 document->html->body->father->son
+      father.addEventListener(
+        "click",
+        function () {
+          alert("11");
+        },
+        true
+      );
+      son.addEventListener(
+        "click",
+        function () {
+          alert("22");
+        },
+        true
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      float: left;
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 100px 200px;
+      overflow: hidden;
+    }
+    .box img {
+      width: 300px;
+      height: 300px;
+    }
+    .box * {
+      /*box内所有元素*/
+      transition: 1s;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+    .box:hover img {
+      transform: scale(1.6) rotateZ(-15deg);
+    }
+    .box h2 {
+      color: white;
+      width: 200px;
+      transform: translateX(10px) translateY(250px);
+    }
+    .box p {
+      color: white;
+    }
+    .box p:nth-of-type(1) {
+      transform: translateY(140px) translateX(-150px);
+    }
+    .box p:nth-of-type(2) {
+      transform: translateY(180px) translateX(-100px);
+      transition: 1s 0.2s;
+    }
+    .box:hover p:nth-of-type(1) {
+      transform: translateY(140px) translateX(10px);
+    }
+    .box:hover p:nth-of-type(2) {
+      transform: translateY(180px) translateX(10px);
+    }
+  </style>
+  <body>
+    <div class="box">
+      <img src="img/1.png" />
+      <h2>肖申克的救赎</h2>
+      <p class="p1">1992</p>
+      <p class="p2">9.4</p>
+    </div>
+  </body>
+</html>

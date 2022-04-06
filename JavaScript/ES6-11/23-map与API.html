@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map与API</title>
+  </head>
+  <body>
+    <script>
+      //map 是 升级的对象 ，可以用对象作为键
+      let m = new Map();
+      //添加元素
+      m.set("name", "blackid");
+      m.set("age", 23);
+      let obj = {
+        school: "cqucqu",
+      };
+      m.set(obj, ["北京", "上海", "重庆"]);
+      console.log(m);
+      console.log("----------------------------------------------");
+      //size
+      console.log(m.size);
+      console.log("----------------------------------------------");
+      //遍历
+      for (const v of m) {
+        console.log(v);
+      }
+      console.log("----------------------------------------------");
+
+      //删除
+      m.delete("age");
+      console.log(m);
+      console.log("----------------------------------------------");
+      //获取
+      console.log(m.get("name"));
+      console.log(m.get(obj));
+      console.log("----------------------------------------------");
+      //清空
+      m.clear();
+      console.log(m);
+    </script>
+  </body>
+</html>

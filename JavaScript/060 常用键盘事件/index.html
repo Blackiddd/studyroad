@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //键盘弹起
+      document.addEventListener("keyup", function () {
+        console.log("我弹起啦");
+      });
+      //键盘按下
+      document.addEventListener("keydown", function () {
+        console.log("我按下啦");
+      });
+      //键盘按下（不识别功能键ctrl 方向键等
+      document.addEventListener("keypress", function () {
+        console.log("我按下啦press");
+      });
+      //执行顺序：keydown keypress keyup
+    </script>
+  </body>
+</html>

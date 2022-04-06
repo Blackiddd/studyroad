@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    /*     for (初始化变量;条件表达式;操作表达式){
+        循环体
+    }
+    初始化变量：作为计数器
+    条件表达式：执行条件
+    操作表达式： 用于计数器变量更新，每次循环后执行 */
+    // ---------------------------------------------------------------
+    // 打印n行m列星星
+    var n = prompt("想要几行星星？");
+    var m = prompt("想要几列星星？");
+    star = "";
+    for (var i = 1; i <= n; i++) {
+      for (var j = 1; j <= m; j++) {
+        star = star + "⭐";
+      }
+      star = star + "\n";
+    }
+    console.log(star);
+    // ---------------------------------------------------------------------
+    // 九九乘法表
+    var str = "";
+    for (var i = 1; i <= 9; i++) {
+      for (var j = 1; j <= i; j++) {
+        str = str + (j + "×" + i + "=" + i * j) + "\t";
+      }
+      str = str + "\n";
+    }
+    console.log(str);
+  </script>
+  <body></body>
+</html>

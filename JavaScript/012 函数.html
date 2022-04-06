@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    //声明函数
+    function getSum(num1, num2) {
+      var sum = 0;
+      for (var i = num1; i <= num2; i++) {
+        sum += i;
+      }
+      return sum; //return会终止函数，后面代码不会执行，返回的是最后一个值（多个数可以用数组）
+      //如果没有return 返回的是undefined
+    }
+    //调用函数
+    console.log(getSum(1, 100));
+    console.log(getSum(1, 100, 999));
+    console.log(getSum(99)); // num2=undefined
+
+    //声明函数（匿名函数）
+    var fun = function () {
+      console.log("我是函数表达式");
+    };
+    fun();
+    //fun 是变量名不是函数名
+  </script>
+  <body></body>
+</html>

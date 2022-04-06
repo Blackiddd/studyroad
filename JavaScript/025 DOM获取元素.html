@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="time">2021-01-12</div>
+    <ul>
+      <li>富婆饿饿饭饭呜呜1</li>
+      <li>富婆饿饿饭饭呜呜2</li>
+      <li>富婆饿饿饭饭呜呜3</li>
+      <li>富婆饿饿饭饭呜呜4</li>
+      <li>富婆饿饿饭饭呜呜5</li>
+    </ul>
+    <ol>
+      <li>老师菜菜捞捞呜呜1</li>
+      <li>老师菜菜捞捞呜呜2</li>
+      <li>老师菜菜捞捞呜呜3</li>
+      <li>老师菜菜捞捞呜呜4</li>
+      <li>老师菜菜捞捞呜呜5</li>
+    </ol>
+    <div class="box">盒子1</div>
+    <div class="box">盒子2</div>
+    <script>
+      var timer = document.getElementById("time"); //通过id获取
+      console.log(timer);
+      console.log(typeof timer);
+      console.dir(timer);
+      console.log("-------------------------------");
+      var lis = document.getElementsByTagName("li");
+      console.log(lis); //伪数组
+      console.log("-------------------------------");
+      var ol = document.getElementsByTagName("ol");
+      console.log(ol[0].getElementsByTagName("li"));
+      console.log("-------------------------------");
+      var box = document.getElementsByClassName("box");
+      console.log(box);
+      console.log("-------------------------------");
+      // querySelector 返回指定选择器的第一个元素对象 要加 . #
+      var firstbox = document.querySelector(".box");
+      var times = document.querySelector("#time");
+      var firstli = document.querySelector("li");
+      console.log(firstbox);
+      console.log(times);
+      console.log(firstli);
+      console.log("-------------------------------");
+      // querySelectorAll 返回指定选择器所有对象结核
+      var allBox = document.querySelectorAll(".box");
+      console.log(allBox);
+    </script>
+  </body>
+</html>

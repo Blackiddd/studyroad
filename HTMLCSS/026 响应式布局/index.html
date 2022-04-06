@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    li {
+      list-style: none;
+    }
+    a {
+      cursor: pointer;
+      text-decoration: none;
+    }
+    a:visited {
+      color: white;
+    }
+    header {
+      height: 50px;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: fixed;
+      width: 100%;
+    }
+    header .menu {
+      float: right;
+      margin-right: 20px;
+      color: white;
+      font-size: 18px;
+      line-height: 50px;
+      display: none;
+    }
+    header .menu .nav-list {
+      width: 100%;
+      position: fixed;
+      top: 50px;
+      left: 0;
+    }
+    header .menu .nav-list a {
+      display: block;
+      width: 100%;
+      height: 50px;
+      background-color: rgba(0, 0, 0, 0.6);
+      text-align: center;
+      border-bottom: 1px dotted white;
+    }
+    header .menu {
+      cursor: pointer;
+    }
+    header .menu:hover .nav-list {
+      display: block;
+    }
+    header img.logo {
+      float: left;
+      width: 50px;
+      margin-left: 30px;
+      height: 50px;
+    }
+    header .nav-list {
+      display: block;
+      float: right;
+      margin-left: 20px;
+      line-height: 50px;
+    }
+    header .nav-list a {
+      margin-right: 10px;
+    }
+    .banner {
+      background: url(img/banner.png);
+      height: 400px;
+      margin-bottom: 20px;
+    }
+    .product-list li {
+      box-sizing: border-box;
+      width: 20%;
+      float: left;
+      padding: 0 10px 20px;
+    }
+    .product-list li img {
+      width: 100%;
+      border-radius: 5px;
+      box-shadow: 0 0 10px #666;
+    }
+    @media screen and (max-width: 1024px) {
+      .product-list li {
+        width: 25%;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      .product-list li {
+        width: 33.333%;
+      }
+      header .menu {
+        display: block;
+      }
+      header .nav-list {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 640px) {
+      .product-list li {
+        width: 50%;
+      }
+    }
+  </style>
+  <body>
+    <header>
+      <div class="menu">
+        menu
+        <nav class="nav-list">
+          <a href="">文章</a>
+          <a href="">素材</a>
+          <a href="">活动</a>
+          <a href="">新闻</a>
+          <a href="">论坛</a>
+          <a href="">更多</a>
+        </nav>
+      </div>
+      <img src="img/logo.png" alt="" class="logo" />
+      <nav class="nav-list">
+        <a href="">文章</a>
+        <a href="">素材</a>
+        <a href="">活动</a>
+        <a href="">新闻</a>
+        <a href="">论坛</a>
+        <a href="">更多</a>
+      </nav>
+    </header>
+    <div class="banner"></div>
+    <ul class="product-list">
+      <li>
+        <div>
+          <img src="img/photo.png" alt="" />
+        </div>
+        <p>迷你摄影微型展</p>
+        <p>
+          <span>2021-11-13</span>
+          <span>作者：佚名</span>
+        </p>
+      </li>
+      <li>
+        <div>
+          <img src="img/photo.png" alt="" />
+        </div>
+        <p>迷你摄影微型展</p>
+        <p>
+          <span>2021-11-13</span>
+          <span>作者：佚名</span>
+        </p>
+      </li>
+      <li>
+        <div>
+          <img src="img/photo.png" alt="" />
+        </div>
+        <p>迷你摄影微型展</p>
+        <p>
+          <span>2021-11-13</span>
+          <span>作者：佚名</span>
+        </p>
+      </li>
+      <li>
+        <div>
+          <img src="img/photo.png" alt="" />
+        </div>
+        <p>迷你摄影微型展</p>
+        <p>
+          <span>2021-11-13</span>
+          <span>作者：佚名</span>
+        </p>
+      </li>
+      <li>
+        <div>
+          <img src="img/photo.png" alt="" />
+        </div>
+        <p>迷你摄影微型展</p>
+        <p>
+          <span>2021-11-13</span>
+          <span>作者：佚名</span>
+        </p>
+      </li>
+      <li>
+        <div>
+          <img src="img/photo.png" alt="" />
+        </div>
+        <p>迷你摄影微型展</p>
+        <p>
+          <span>2021-11-13</span>
+          <span>作者：佚名</span>
+        </p>
+      </li>
+      <li>
+        <div>
+          <img src="img/photo.png" alt="" />
+        </div>
+        <p>迷你摄影微型展</p>
+        <p>
+          <span>2021-11-13</span>
+          <span>作者：佚名</span>
+        </p>
+      </li>
+      <li>
+        <div>
+          <img src="img/photo.png" alt="" />
+        </div>
+        <p>迷你摄影微型展</p>
+        <p>
+          <span>2021-11-13</span>
+          <span>作者：佚名</span>
+        </p>
+      </li>
+      <li>
+        <div>
+          <img src="img/photo.png" alt="" />
+        </div>
+        <p>迷你摄影微型展</p>
+        <p>
+          <span>2021-11-13</span>
+          <span>作者：佚名</span>
+        </p>
+      </li>
+    </ul>
+  </body>
+</html>

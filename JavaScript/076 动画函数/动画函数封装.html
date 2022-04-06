@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      left: 0;
+      background-color: aqua;
+    }
+    a {
+      text-decoration: none;
+      color: coral;
+      position: absolute;
+      top: 110px;
+    }
+    button {
+      position: absolute;
+      top: 150px;
+      display: block;
+    }
+  </style>
+  <body>
+    <div></div>
+    <a href="">1234</a>
+    <button>点击a才走</button>
+    <script>
+      //两个参数：动画对象，移动到的距离
+      function animate(obj, target) {
+        clearInterval(obj.timer); //先清除多余的定时器
+        obj.timer = setInterval(function () {
+          var step = Math.ceil((target - obj.offsetLeft) / 10);
+          if (obj.offsetLeft == target) {
+            clearInterval(obj.timer);
+          } else {
+            obj.style.left = obj.offsetLeft + 1 + "px";
+          }
+        }, 30);
+      }
+
+      var btn = document.querySelector("button");
+      var div = document.querySelector("div");
+      var a = document.querySelector("a");
+      btn.addEventListener("click", function () {
+        animate(a, 400);
+      }); //点的越快走得越快，点一次开启一次新的计时器
+      animate(div, 300);
+    </script>
+  </body>
+</html>

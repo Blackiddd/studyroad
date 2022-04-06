@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6对象扩展</title>
+  </head>
+  <body>
+    <script>
+      //二维数组
+      const result1 = Object.fromEntries([
+        ["name", "cqu"],
+        ["qianduan", "js"],
+      ]);
+      console.log(result1);
+      console.log("---------------------------");
+      //map
+      const m = new Map();
+      m.set("name", "cqucqu");
+      console.log(m);
+      const result2 = Object.fromEntries(m);
+      console.log(result2);
+      console.log("---------------------------");
+      //ES8 Object.entries
+      const arr = Object.entries({
+        name: "cqucqucqu",
+      });
+      console.log(arr);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async h函数</title>
+  </head>
+  <body>
+    <script>
+      async function fn() {
+        //如果return的结果不是promise对象，则返回的fn为一个成功的promise对象
+        // return "blackid";
+        //如果抛出错误，则返回一个失败的promise对象
+        // throw new Error("出错啦");
+        //返回的如果是一个promise对象
+        return new Promise((resolve, reject) => {
+          //   resolve("成功");
+          reject("失败");
+        });
+      }
+      const result = fn();
+      result.then(
+        (value) => {
+          console.log(value);
+        },
+        (reason) => {
+          console.warn(reason);
+        }
+      );
+    </script>
+  </body>
+</html>

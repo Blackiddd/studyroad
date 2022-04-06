@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>扩展运算符 & rest</title>
+  </head>
+  <body>
+    <script>
+      //ES9为对象提供了像数组一样的
+      function connect({ host, port, ...user }) {
+        console.log(host);
+        console.log(port);
+        console.log(user);
+      }
+      connect({
+        host: "127.0.0.1",
+        port: "5500",
+        username: "admin",
+        password: "root",
+        type: "master",
+      });
+      console.log("---------------------");
+      //...
+      const skillq = {
+        q: "天音波",
+      };
+      const skillw = {
+        w: "金钟罩",
+      };
+      const skille = {
+        e: "天雷破",
+      };
+      const skillr = {
+        r: "天龙摆尾",
+      };
+      const liqing = { ...skillq, ...skillw, ...skille, ...skillr };
+      console.log(liqing);
+    </script>
+  </body>
+</html>

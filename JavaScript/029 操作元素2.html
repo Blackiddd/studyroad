@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="mate">Mate</button>
+    <button id="p">P系列</button>
+    <img src="../HTMLCSS/华为商城/img/Mate.png" alt="" title="Mate 40 Pro" />
+    <!-- 修改元素属性 -->
+    <script>
+      var mate = document.getElementById("mate");
+      var p = document.getElementById("p");
+      var img = document.querySelector("img");
+      mate.onclick = function () {
+        img.src = "../HTMLCSS/华为商城/img/Mate.png";
+        img.title = "Mate 40 Pro";
+      };
+      p.onclick = function () {
+        img.src = "../HTMLCSS/华为商城/img/P.png";
+        img.title = "P50 Pro";
+      };
+    </script>
+  </body>
+</html>

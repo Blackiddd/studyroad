@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>迭代器</title>
+  </head>
+  <body>
+    <script>
+      const F4 = ["大连", "沈阳", "长春", "哈尔滨"];
+      for (const i in F4) {
+        console.log(i, F4[i]);
+      }
+      for (const i of F4) {
+        console.log(i);
+      }
+
+      let iterator = F4[Symbol.iterator]();
+      console.log(iterator.next());
+      console.log(iterator.next());
+      console.log(iterator.next());
+      console.log(iterator.next());
+      console.log(iterator.next());
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    /*     function 构造函数名(){
+        this.属性 = 值；
+        this.方法 = function();
+    }
+    new 构造函数名()； */
+    function Pigs(uname, age, sex) {
+      //构造函数名字要大写
+      this.name = uname;
+      this.age = age;
+      this.sex = sex;
+      this.eat = function (food) {
+        console.log("我能吃" + food);
+      };
+      //构造函数不需要return
+    }
+    var dbw = new Pigs("dbw", 23, "男");
+    console.log(dbw.name);
+    var mldr = new Pigs("mldr", 23, "男");
+    mldr.eat("两碗");
+  </script>
+  <body></body>
+</html>

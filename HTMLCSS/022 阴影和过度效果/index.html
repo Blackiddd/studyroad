@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+    input[type="checkbox"] {
+      -webkit-appearance: none;
+      margin: 50px;
+      border: 10px solid #c1c1c1;
+      border-radius: 50px;
+      width: 150px;
+      height: 70px;
+      background: #888;
+      position: relative;
+      box-shadow: 0px 0px 10px 1px #3f3f3f inset; /*left top 模糊值 扩大值 影子颜色 阴影方向*/
+      transition: 1s; /*要过渡的属性 过渡时间 过渡方式 延迟时间 */
+    }
+    input[type="checkbox"]::after {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      border-radius: 30px;
+      background: linear-gradient(
+        /*linear-gradient（）线性渐变*/ to bottom,
+        #d3d3d3,
+        #9e9e9e
+      );
+      top: -5px;
+      left: -5px;
+      box-shadow: 0px 2px 2px 0px #eee inset, 2px 1px 2px 0px #333;
+      transition: 0.5s;
+    }
+    input[type="checkbox"]:checked {
+      background-color: green;
+    }
+    input[type="checkbox"]:checked:after {
+      left: 70px;
+    }
+  </style>
+  <body>
+    <input type="checkbox" name="" id="" />
+  </body>
+</html>

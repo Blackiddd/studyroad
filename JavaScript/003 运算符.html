@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      // 算数运算符 + - * / %（取余）
+      //   浮点数精度问题，不能拿浮点数比较相等
+      var num = 0.1 + 0.2;
+      console.log(num);
+      console.log(num == 0.3);
+      console.log(0.07 * 100);
+      //   递增递减运算符 (++)(--)
+      //   前置 先加1，再返回值
+      var fore = 10;
+      //   ++fore = fore=fore+1
+      console.log(++fore + 10);
+      //   后置 先返回原值，后自加
+      var after = 20;
+      //   after++ = after=after+1
+      console.log(after++ + 10);
+      console.log(after);
+      var a = 10;
+      var b = a++ + ++a; // a++=10,a=11,++a=11+1=12
+      console.log(b);
+
+      console.log("--------------------------------------------------");
+
+      // 比较运算符 < > <= >= ==(会转型)， !=， ===（值和数据类型全相等）， ！==
+
+      console.log("--------------------------------------------------");
+
+      // 逻辑运算符 &&与，||或，！非
+      // 运算短路：左边表达式可以确定结果时，不再右边的值，
+      //  &&： 如果表达式1的结果为真（假），返回表达式2（1）
+      console.log(123 && 456); //123=true，456
+      console.log(0 && 12 & 5345 && 432); //0
+      //  ||： 如果表达式1结果为真（假），返回表达式1（2）
+      console.log(111 || 342 || 3232 || 997);
+      console.log(0 || 999);
+      console.log(0 || 666 || 999);
+
+      var c = 0;
+      console.log(155 || c++); // 155为真，中断，c++不执行
+      console.log(c);
+
+      console.log("--------------------------------------------------");
+
+      //赋值运算符  =。+=，-=、*=、/=、%=
+      var d = 10;
+      d += 2; //d=d+2
+      console.log(d);
+      console.log("--------------------------------------------------");
+      /*      1      小括号               （）
+        2      一元运算符           ++ -- ！
+        3      算术运算符           先 * / % 后 + -
+        4      关系运算符           > >= < <=
+        5      相等运算符           == ！= === ！==
+        6      逻辑运算符           先 && 后 ||
+        7      赋值运算符               =
+        8      逗号运算符               ， */
+    </script>
+  </head>
+  <body></body>
+</html>

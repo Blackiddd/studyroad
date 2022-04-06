@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6的数值扩展</title>
+  </head>
+  <body>
+    <script>
+      //0.Number.EPSILON  是JS表示最小精度
+      function equal(a, b) {
+        if (Math.abs(a - b) < Number.EPSILON) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+      console.log(0.1 + 0.2 === 0.3);
+      console.log(equal(0.1 + 0.2, 0.3));
+      console.log("------------------------------------------");
+      //1.二进制和八进制
+      let b = 0b1010;
+      let x = 0xff;
+      console.log(b);
+      console.log(x);
+      console.log("-------------------------------------------");
+      //2.Number.isFinite  检测是否是有限数
+      console.log(Number.isFinite(100));
+      console.log(Number.isFinite(100 / 0));
+      console.log("-------------------------------------------");
+      //3.Number.isNAN 检测是否为NaN
+      console.log(Number.isNaN(123));
+      console.log(Number.isNaN(NaN));
+      console.log("-------------------------------------------");
+      //4.Number.parseInt Number.parseFloat转化数
+      console.log(Number.parseInt("5211314iloveu"));
+      console.log(Number.parseFloat("3.1415926NB"));
+      console.log("-------------------------------------------");
+      //5.Number.isInteger检测是否为整数
+      console.log(Number.isInteger(123));
+      console.log(Number.isInteger(1.23));
+      console.log("-------------------------------------------");
+      //6.Math.trunc抹掉小数点后面
+      console.log(Math.trunc(3.1415));
+      console.log("-------------------------------------------");
+
+      //7.判断正负和0
+      console.log(Math.sign(100));
+      console.log(Math.sign(0));
+      console.log(Math.sign(-900));
+    </script>
+  </body>
+</html>

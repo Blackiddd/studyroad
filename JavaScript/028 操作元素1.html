@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 改变元素内容 -->
+    <button>显示当前系统时间</button>
+    <div>某个时间</div>
+    <p>直接显示时间</p>
+    <script>
+      var btn = document.querySelector("button");
+      var div = document.querySelector("div");
+      btn.onclick = function () {
+        div.innerText = getDate(); //innerText 会去除html标签，空格和换行也会去掉
+      };
+      //可以不添加事件
+      var p = document.querySelector("p");
+      p.innerHTML = getDate(); //innerHTML 可以识别html标签，空格和换行不会去掉 W3C标准
+
+      function getDate() {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var dates = date.getDate();
+        var dayIndex = date.getDay();
+        var day = [
+          "星期日",
+          "星期一",
+          "星期二",
+          "星期三",
+          "星期四",
+          "星期五",
+          "星期六",
+        ];
+        return (
+          "现在是" + year + "年" + month + "月" + dates + "日" + day[dayIndex]
+        );
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .tab {
+      height: 30px;
+      background-color: antiquewhite;
+      line-height: 30px;
+    }
+    ul li {
+      list-style: none;
+      float: left;
+      margin-right: 10px;
+    }
+    .current {
+      background-color: red;
+      color: white;
+    }
+    .item {
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="tab">
+      <div class="tab-list">
+        <ul>
+          <li class="current">商品介绍</li>
+          <li>参数与规格</li>
+          <li>售后保障</li>
+          <li>商品评价</li>
+          <li>社区</li>
+        </ul>
+      </div>
+    </div>
+    <div class="tab-con">
+      <div class="item" style="display: block">商品介绍模块</div>
+      <div class="item">参数与规格模块</div>
+      <div class="item">售后报账模块</div>
+      <div class="item">商品评价模块</div>
+      <div class="item">社区模块</div>
+    </div>
+
+    <script>
+      var tab_list = document.querySelector("tab-list");
+      var lis = document.querySelectorAll("li");
+      var items = document.querySelectorAll(".item");
+
+      for (i = 0; i < lis.length; i++) {
+        lis[i].setAttribute("data-index", i);
+        lis[i].onclick = function () {
+          for (i = 0; i < lis.length; i++) {
+            lis[i].className = "";
+          }
+          this.className = "current";
+          var data_index = this.getAttribute("data-index");
+          for (i = 0; i < items.length; i++) {
+            items[i].style.display = "none";
+          }
+          items[data_index].style.display = "block";
+        };
+      }
+    </script>
+  </body>
+</html>

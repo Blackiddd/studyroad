@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function getUsers() {
+        setTimeout(() => {
+          let data = "Blackid";
+          iterator.next(data);
+        }, 1000);
+      }
+      function getOrders() {
+        setTimeout(() => {
+          let data = "3";
+          iterator.next(data);
+        }, 1000);
+      }
+      function getGoods() {
+        setTimeout(() => {
+          let data = "macbook pro";
+          iterator.next(data);
+        }, 1000);
+      }
+      function* gen() {
+        let users = yield getUsers();
+        let orders = yield getOrders();
+        let goods = yield getGoods();
+        console.log(users, orders, goods);
+      }
+      let iterator = gen();
+      iterator.next();
+    </script>
+  </body>
+</html>

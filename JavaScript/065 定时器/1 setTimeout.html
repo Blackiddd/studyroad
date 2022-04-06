@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //语法规范： window.setTimeout(调用函数，延时时间)
+      //window可以省略 时间单位为ms
+      //多个定时器，给每个加名字
+      var timer1 = setTimeout(function () {
+        console.log("时间到了");
+      }, 3000);
+      var timer2 = setTimeout(function () {
+        console.log("BOOM！！");
+      }, 5000);
+    </script>
+  </body>
+</html>

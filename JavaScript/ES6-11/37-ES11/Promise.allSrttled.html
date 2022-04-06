@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const p1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("data1");
+          //   reject("出错啦！");
+        }, 1000);
+      });
+      const p2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("data2");
+          //   reject("出错啦！");
+        }, 1000);
+      });
+      const result1 = Promise.allSettled([p1, p2]); //无论成功失败，都成功，返回结果
+      console.log(result1);
+      const result2 = Promise.all([p1, p2]); //必须两个都成功
+      console.log(result2);
+    </script>
+  </body>
+</html>

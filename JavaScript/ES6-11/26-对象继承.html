@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>对象继承</title>
+  </head>
+  <body>
+    <script>
+      //手机
+      function phone(brand, price) {
+        this.brand = brand;
+        this.price = price;
+      }
+      phone.prototype.call = function () {
+        console.log("我可以打电话");
+      };
+      //智能手机
+      function smartPhone(brand, price, color, size) {
+        phone.call(this, brand, price);
+        this.color = color;
+        this.size = size;
+      }
+      //设置子级构造函数的原型
+      smartPhone.prototype = new phone();
+      //声明子类的方法
+      smartPhone.prototype.photo = function () {
+        console.log("我可以拍照");
+      };
+      smartPhone.prototype.playGame = function () {
+        console.log("我可以玩游戏 ");
+      };
+
+      const oneplus = new smartPhone("1+", "3999", "暗夜黑", "6.9 inch");
+      console.log(oneplus);
+      oneplus.call();
+      oneplus.photo();
+      oneplus.playGame();
+    </script>
+  </body>
+</html>

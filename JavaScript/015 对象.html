@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    //创建对象-字面量{}
+    var obj = {
+      uname: "Blackid",
+      age: 23,
+      sex: "male",
+      sayHi: function () {
+        console.log("Hi~");
+      },
+    };
+    //使用对象属性
+    console.log(obj.uname);
+    console.log(obj["age"]);
+    //适用对象方法+（）
+    obj.sayHi();
+    //创建对象-new Object
+    var obj1 = new Object();
+    obj1.uname = "deren";
+    obj1.age = 23;
+    obj1.eat = function () {
+      console.log("我能吃3碗");
+    };
+    //创建对象-构造函数
+  </script>
+  <body></body>
+</html>

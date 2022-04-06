@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>=></title>
+  </head>
+  <body>
+    <script>
+      let fn = (a, b) => {
+        return a + b;
+      };
+      let result = fn(1, 2);
+      console.log(result);
+      //适合与this无关的回调，定时器，数组的回调
+      //=>函数特性
+      //1. this 是静态的，始终指向函数声明时所在作用域下的this值
+      window.name = "CQU-406  ";
+      const school = {
+        name: "cqucqu",
+      };
+
+      function getname() {
+        console.log(this.name);
+      }
+      let getname2 = () => {
+        console.log(this.name);
+      };
+      //直接调用
+      getname();
+      getname2();
+      //call 调用
+      getname.call(school);
+      getname2.call(school);
+      //2.不能作为构造实例化对象
+      //   let Person = (name, age) => {
+      //     this.name = name;
+      //     this.age = age;
+      //   };
+      //   let me = new Person("dbw", 23);
+      //   console.log(me);
+
+      // 3. 不能使用arguments变量
+      // let fn2 = () => {
+      //   console.log(argumens);
+      // };
+      // fn2(1, 2, 3);
+
+      // 4.箭头函数的简写
+      // （1）省略形参小括号，当形参有且有一个的时候
+      let add = (n) => {
+        return n + n;
+      };
+      console.log(add(5));
+      //（2）省略花括号，当代码体只有一条语句的时候,此时return也可以省略
+      let pow = (n) => n * n;
+      console.log(pow(8));
+    </script>
+  </body>
+</html>

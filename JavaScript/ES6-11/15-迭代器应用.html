@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自定义遍历数组</title>
+  </head>
+  <body>
+    <script>
+      //返回stus内
+      const bailan = {
+        office: "406",
+        stus: ["blackid", "panpanAD", "childe liu", "mldr"],
+        // [Symbol.iterator]() {  //创建一个指针对象，指向当前数据结构起始位置
+        //   return {
+        //     next: function () {   //第一次调用对象的next方法，指针自动指向第一个，接下来next不断往后移动
+        //       return { value: 123, done: false };//每调用next方法返回一个包含value和done属性的对象
+        //     },
+        //   };
+        // },
+        [Symbol.iterator]() {
+          //索引变量
+          let index = 0;
+          let _this = this;
+          return {
+            next: function () {
+              if (index < _this.stus.length) {
+                const result = { value: _this.stus[index], done: false };
+                index++;
+                return result;
+              } else {
+                return { value: undefined, done: true };
+              }
+            },
+          };
+        },
+      };
+      //遍历这个对象
+      //   bailan.stus.forEach(function (item) {
+      //     console.log(item);
+      //   });
+
+      for (const v of bailan) {
+        console.log(v);
+      }
+    </script>
+  </body>
+</html>

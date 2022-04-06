@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>布局中的定位</title>
+  </head>
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      background: url(imgs/map.png) no-repeat;
+      width: 800px;
+      height: 541px;
+      margin: auto;
+      position: relative;
+    }
+    .p1 {
+      left: 300px;
+      top: 240px;
+      position: absolute;
+    }
+    .point {
+      width: 15px;
+      height: 15px;
+      background-color: lightskyblue;
+      float: left;
+    }
+    .info {
+      float: left;
+      line-height: 15px;
+    }
+  </style>
+  <body>
+    <div class="box">
+      <div class="p1">
+        <span class="point"></span>
+        <span class="info">重庆</span>
+      </div>
+    </div>
+  </body>
+</html>

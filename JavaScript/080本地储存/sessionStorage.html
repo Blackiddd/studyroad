@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" />
+    <button class="set">储存数据</button>
+    <button class="get">获取数据</button>
+    <button class="remove">删除数据</button>
+    <button class="clear">清除所有数据</button>
+  </body>
+  <script>
+    //生命周期为关闭浏览器窗口
+    //同一窗口下数值共享
+    var input = document.querySelector("input");
+    var set = document.querySelector(".set");
+    var get = document.querySelector(".get");
+    var remove = document.querySelector(".remove");
+    var clear = document.querySelector(".clear");
+    set.addEventListener("click", function () {
+      sessionStorage.setItem("uname", input.value);
+      sessionStorage.setItem("pwd", input.value);
+    });
+    get.addEventListener("click", function () {
+      input.value = sessionStorage.getItem("uname");
+    });
+    remove.addEventListener("click", function () {
+      sessionStorage.removeItem("pwd");
+    });
+    clear.addEventListener("click", function () {
+      sessionStorage.clear();
+    });
+  </script>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rest参数</title>
+  </head>
+  <body>
+    <script>
+      //用来代替arguments
+      //args必须放在最后
+      function date(...args) {
+        console.log(args);
+      }
+      date("dbw", "lb", "mldr"); //数组
+    </script>
+  </body>
+</html>

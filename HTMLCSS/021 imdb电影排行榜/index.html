@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>imdb电影排行榜</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      border: none;
+      list-style: none;
+    }
+    img {
+      height: 80px;
+      vertical-align: middle;
+    }
+    ul {
+      width: 600px;
+      margin: 50px auto;
+      border-radius: 5px; /*圆角为什么没生效？？*/
+    }
+    ul li {
+      height: 90px;
+      line-height: 90px;
+    }
+    ul li:first-child {
+      height: 40px;
+      line-height: 40px;
+      background-color: cornflowerblue;
+      font-weight: bold;
+    }
+    ul li div {
+      float: left;
+      text-align: center;
+    }
+    ul li:nth-of-type(even) {
+      /*even表示偶数*/
+      background-color: lightgrey;
+    }
+    ul li div:nth-child(1) {
+      width: 120px;
+    }
+    ul li div:nth-child(2) {
+      width: 250px;
+    }
+    ul li div:nth-child(3) {
+      width: 100px;
+    }
+    ul li div:nth-child(4) {
+      width: 130px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <ul>
+        <li>
+          <div>海报</div>
+          <div>imdb电影排行榜</div>
+          <div>评分</div>
+          <div>年份</div>
+        </li>
+        <li>
+          <div><img src="imgs/1.png" alt="" /></div>
+          <div>《肖申克的救赎》</div>
+          <div>9.2</div>
+          <div>1994</div>
+        </li>
+        <li>
+          <div><img src="imgs/2.png" alt="" /></div>
+          <div>《教父》</div>
+          <div>9.1</div>
+          <div>1972</div>
+        </li>
+        <li>
+          <div><img src="imgs/3.png" alt="" /></div>
+          <div>《教父2》</div>
+          <div>9.0</div>
+          <div>1974</div>
+        </li>
+        <li>
+          <div><img src="imgs/4.png" alt="" /></div>
+          <div>《黄金三镖客》</div>
+          <div>9.0</div>
+          <div>1966</div>
+        </li>
+        <li>
+          <div><img src="imgs/5.png" alt="" /></div>
+          <div>《低俗小说》</div>
+          <div>9.0</div>
+          <div>1994</div>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

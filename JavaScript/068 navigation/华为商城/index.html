@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>仿华为商城VMALL</title>
+    <base target="_blank" />
+  </head>
+  <link rel="stylesheet" href="css/iconfont.css" />
+  <link rel="stylesheet" href="css/goods.css">
+  <link rel="stylesheet" href="css/index.css" />
+  <script>
+    if(navigator.userAgent.match(/(phone|pad|pod|iphone|ipad|ipod|ios|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows phone)/i)){
+      location.href='../030 flex携程实例/my-index.html'
+    }
+  </script>
+  <body>
+    <!-- 顶部广告 -->
+    <div class="ad">
+      <a href="https://sale.vmall.com/pseries.html">
+        <img src="img/微信截图_20211122130846.png" alt="" />
+      </a>
+    </div>
+    <!-- 黑色导航栏 -->
+    <div class="nav-common">
+      <ul class="nav-common-left">
+        <li>
+          <span><a href="https://www.vmall.com/">首页</a></span>
+        </li>
+        <li>
+          <span><a href="https://consumer.huawei.com/cn/">华为官网</a></span>
+        </li>
+        <li>
+          <span><a href="https://club.huawei.com/">花粉俱乐部</a></span>
+        </li>
+        <li>
+          <span
+            ><a href="https://www.vmall.com/priority">V码（优购码）</a></span
+          >
+        </li>
+        <li>
+          <span><a href="https://company.vmall.com/#/huawei">企业购</a></span>
+        </li>
+        <li>
+          <span><a href="">Slect Region</a></span>
+        </li>
+        <li class="more">
+          <span> 更多精彩 </span>
+          <span class="iconfont icon-sanjiaoxing"></span>
+          <div class="more-nav">
+            <div class="more-nav-item">HarmonyOS</div>
+            <div class="more-nav-item">应用市场</div>
+            <div class="more-nav-item">华为终端云空间</div>
+            <div class="more-nav-item">开发者联盟</div>
+          </div>
+        </li>
+      </ul>
+      <ul class="nav-common-right">
+        <li>
+          <span
+            ><a
+              href="https://id1.cloud.huawei.com/CAS/portal/loginAuth.html?reqClientType=26&loginChannel=26000000&countryCode=cn&loginUrl=https%3A%2F%2Fid1.cloud.huawei.com%2FCAS%2Fportal%2FloginAuth.html&lang=zh-cn&themeName=red&service=https%3A%2F%2Fwww.vmall.com%2Faccount%2Fcaslogin%3Furl%3Dhttps%253A%252F%252Fwww.vmall.com%252Findex_new.html&validated=true"
+              >请登录</a
+            ></span
+          >
+        </li>
+        <li>
+          <span
+            ><a
+              href="https://id1.cloud.huawei.com/IDMW/portal/userRegister/regbyphone.html?service=https%3A%2F%2Fwww.vmall.com%2Faccount%2Fcaslogin&loginChannel=26000000&reqClientType=26&lang=zh-cn&_t=1637937184609"
+              >注册</a
+            ></span
+          >
+        </li>
+        <li>
+          <span
+            ><a
+              href="https://id1.cloud.huawei.com/CAS/portal/loginAuth.html?reqClientType=26&loginChannel=26000000&countryCode=cn&loginUrl=https%3A%2F%2Fid1.cloud.huawei.com%2FCAS%2Fportal%2FloginAuth.html&lang=zh-cn&themeName=red&service=https%3A%2F%2Fwww.vmall.com%2Faccount%2Fcaslogin%3Furl%3Dhttps%253A%252F%252Fwww.vmall.com%252Fmember%252Forder&validated=true"
+              >我的订单</a
+            ></span
+          >
+        </li>
+        <li class="service">
+          <span><a href="#">客服</a></span>
+          <span class="iconfont icon-sanjiaoxing"></span>
+          <div class="service-nav">
+            <ul>
+              <li>联系客服</li>
+              <li>服务中心</li>
+            </ul>
+          </div>
+        </li>
+        <li class="web-nav">
+          <span><a href="#">网站导航</a></span>
+          <span class="iconfont icon-sanjiaoxing"></span>
+          <div class="web-nav-item"></div>
+        </li>
+        <li class="phone">
+          <span><a href="#">手机版</a></span>
+          <span class="iconfont icon-sanjiaoxing"></span>
+          <div class="wechat-code"></div>
+        </li>
+        <li class="cart">
+          <span class="iconfont icon-gouwuche"></span>
+          <span><a href="https://www.vmall.com/cart2"> 购物车(0)</a></span>
+          <div class="cart-item">
+            <span><img src="img/cart-big.svg" height="80px" /></span>
+            <span>您的购物车是空的，赶紧选购叭~</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- 固定导航栏 -->
+    <div class="fix-nav">
+      <div class="fix-nav-left">
+        <a href="https://www.vmall.com/index_new.html"
+          ><img src="img/logo.png" alt="" class="logo"
+        /></a>
+      </div>
+      <div class="fix-nav-mid">
+        <div class="fix-nav-mid-item">
+          <a href="https://sale.vmall.com/huaweizone.html">华为专区</a>
+        </div>
+        <div class="fix-nav-mid-item">
+          <a
+            href="https://www.vmall.com/portal/activity/index.html?pn=harmonyosconnectpc"
+            >鸿蒙智联</a
+          >
+        </div>
+        <div class="fix-nav-mid-item">
+          <a
+            href="https://www.vmall.com/portal/activity/index.html?pageId=301002069"
+            >全球甄选</a
+          >
+        </div>
+        <div class="fix-nav-mid-item">
+          <a
+            href="https://www.vmall.com/portal/activity/index.html?pn=zhinengjiajupc"
+            >智能家居</a
+          >
+        </div>
+        <div class="fix-nav-mid-item">
+          <a
+            href="https://www.vmall.com/portal/activity/index.html?pn=zhixuanpc"
+            >华为智选</a
+          >
+        </div>
+        <div class="fix-nav-mid-item">
+          <a href="https://sale.vmall.com/hwharmony.html">HarmonyOS</a>
+        </div>
+      </div>
+      <div class="fix-nav-right">
+        <a href="#"><span class="iconfont icon-Magnifier"></span> </a>
+      </div>
+    </div>
+    <!-- 悬浮固定导航栏 -->
+    <div class="float-nav">
+      <div class="float-nav-item">
+        <span class="iconfont icon-gouwuche" style="font-size: 24px"></span>
+        <span>购物车</span>
+      </div>
+      <div class="float-nav-item">
+        <span class="iconfont icon-kefu" style="font-size: 24px"></span>
+        <span>在线客服</span>
+      </div>
+      <div class="float-nav-item">
+        <span class="iconfont icon-fuwu_o" style="font-size: 24px"></span>
+        <span>自助服务</span>
+      </div>
+    </div>
+    <!-- 焦点图&侧导航栏 -->
+    <div class="focus">
+      <div class="banner"></div>
+      <div class="edge-nav">
+        <ul>
+          <li>
+            <span class="edge-nav-word">手机</span>
+            <span class="iconfont icon-yousanjiao"></span>
+            <div class="edge-nav-1">
+              <div class="edge-nav-example">
+                <img src="img/Mate.png" alt="" />
+                <span>HUAWEI Mate系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/P.png" alt="" />
+                <span>HUAWEI P系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/nova.png" alt="" />
+                <span>HUAWEI Nova系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/畅享.png" alt="" />
+                <span>HUAWEI 畅享系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/二手.png" alt="" />
+                <span>HUAWEI认证二手机</span>
+              </div>
+              <div class="edge-nav-example">
+                <span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看全部</span
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="edge-nav-word">电脑办公</span>
+            <span class="iconfont icon-yousanjiao"></span>
+            <div class="edge-nav-2">
+              <div class="edge-nav-example">
+                <img src="img/matebook x.png" alt="" />
+                <span>华为MateBook X系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/matebook num.png" alt="" />
+                <span>华为MateBook数字系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/matebook D.png" alt="" />
+                <span>华为MateBook D系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/matebook e.png" alt="" />
+                <span>华为MateBook E系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/mateview.png" alt="" />
+                <span>华为显示器</span>
+              </div>
+              <div class="edge-nav-example">
+                <span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看全部</span
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="edge-nav-word">平板</span>
+            <span class="iconfont icon-yousanjiao"></span>
+            <div class="edge-nav-3">
+              <div class="edge-nav-example">
+                <img src="img/Mate.png" alt="" />
+                <span>HUAWEI Mate系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/P.png" alt="" />
+                <span>HUAWEI P系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/nova.png" alt="" />
+                <span>HUAWEI Nova系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/畅享.png" alt="" />
+                <span>HUAWEI 畅享系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/二手.png" alt="" />
+                <span>HUAWEI认证二手机</span>
+              </div>
+              <div class="edge-nav-example">
+                <span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看全部</span
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="edge-nav-word">智慧屏</span>
+            <span class="iconfont icon-yousanjiao"></span>
+            <div class="edge-nav-4">
+              <div class="edge-nav-example">
+                <img src="img/Mate.png" alt="" />
+                <span>HUAWEI Mate系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/P.png" alt="" />
+                <span>HUAWEI P系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/nova.png" alt="" />
+                <span>HUAWEI Nova系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/畅享.png" alt="" />
+                <span>HUAWEI 畅享系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/二手.png" alt="" />
+                <span>HUAWEI认证二手机</span>
+              </div>
+              <div class="edge-nav-example">
+                <span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看全部</span
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="edge-nav-word">智能穿戴</span>
+            <span class="iconfont icon-yousanjiao"></span>
+            <div class="edge-nav-5">
+              <div class="edge-nav-example">
+                <img src="img/Mate.png" alt="" />
+                <span>HUAWEI Mate系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/P.png" alt="" />
+                <span>HUAWEI P系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/nova.png" alt="" />
+                <span>HUAWEI Nova系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/畅享.png" alt="" />
+                <span>HUAWEI 畅享系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/二手.png" alt="" />
+                <span>HUAWEI认证二手机</span>
+              </div>
+              <div class="edge-nav-example">
+                <span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看全部</span
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="edge-nav-word">耳机音箱</span>
+            <span class="iconfont icon-yousanjiao"></span>
+            <div class="edge-nav-6">
+              <div class="edge-nav-example">
+                <img src="img/Mate.png" alt="" />
+                <span>HUAWEI Mate系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/P.png" alt="" />
+                <span>HUAWEI P系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/nova.png" alt="" />
+                <span>HUAWEI Nova系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/畅享.png" alt="" />
+                <span>HUAWEI 畅享系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/二手.png" alt="" />
+                <span>HUAWEI认证二手机</span>
+              </div>
+              <div class="edge-nav-example">
+                <span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看全部</span
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="edge-nav-word">智能路由</span>
+            <span class="iconfont icon-yousanjiao"></span>
+            <div class="edge-nav-7">
+              <div class="edge-nav-example">
+                <img src="img/Mate.png" alt="" />
+                <span>HUAWEI Mate系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/P.png" alt="" />
+                <span>HUAWEI P系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/nova.png" alt="" />
+                <span>HUAWEI Nova系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/畅享.png" alt="" />
+                <span>HUAWEI 畅享系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/二手.png" alt="" />
+                <span>HUAWEI认证二手机</span>
+              </div>
+              <div class="edge-nav-example">
+                <span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看全部</span
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="edge-nav-word">配件</span>
+            <span class="iconfont icon-yousanjiao"></span>
+            <div class="edge-nav-8">
+              <div class="edge-nav-example">
+                <img src="img/Mate.png" alt="" />
+                <span>HUAWEI Mate系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/P.png" alt="" />
+                <span>HUAWEI P系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/nova.png" alt="" />
+                <span>HUAWEI Nova系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/畅享.png" alt="" />
+                <span>HUAWEI 畅享系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/二手.png" alt="" />
+                <span>HUAWEI认证二手机</span>
+              </div>
+              <div class="edge-nav-example">
+                <span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看全部</span
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="edge-nav-word">生态产品</span>
+            <span class="iconfont icon-yousanjiao"></span>
+            <div class="edge-nav-9">
+              <div class="edge-nav-example">
+                <img src="img/Mate.png" alt="" />
+                <span>HUAWEI Mate系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/P.png" alt="" />
+                <span>HUAWEI P系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/nova.png" alt="" />
+                <span>HUAWEI Nova系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/畅享.png" alt="" />
+                <span>HUAWEI 畅享系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/二手.png" alt="" />
+                <span>HUAWEI认证二手机</span>
+              </div>
+              <div class="edge-nav-example">
+                <span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看全部</span
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="edge-nav-word">家用电器</span>
+            <span class="iconfont icon-yousanjiao"></span>
+            <div class="edge-nav-10">
+              <div class="edge-nav-example">
+                <img src="img/Mate.png" alt="" />
+                <span>HUAWEI Mate系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/P.png" alt="" />
+                <span>HUAWEI P系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/nova.png" alt="" />
+                <span>HUAWEI Nova系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/畅享.png" alt="" />
+                <span>HUAWEI 畅享系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/二手.png" alt="" />
+                <span>HUAWEI认证二手机</span>
+              </div>
+              <div class="edge-nav-example">
+                <span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看全部</span
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="edge-nav-word">美食酒饮</span>
+            <span class="iconfont icon-yousanjiao"></span>
+            <div class="edge-nav-11">
+              <div class="edge-nav-example">
+                <img src="img/Mate.png" alt="" />
+                <span>HUAWEI Mate系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/P.png" alt="" />
+                <span>HUAWEI P系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/nova.png" alt="" />
+                <span>HUAWEI Nova系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/畅享.png" alt="" />
+                <span>HUAWEI 畅享系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/二手.png" alt="" />
+                <span>HUAWEI认证二手机</span>
+              </div>
+              <div class="edge-nav-example">
+                <span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看全部</span
+                >
+              </div>
+            </div>
+          </li>
+          <li>
+            <span class="edge-nav-word">增值服务/企业商用</span>
+            <span class="iconfont icon-yousanjiao"></span>
+            <div class="edge-nav-12">
+              <div class="edge-nav-example">
+                <img src="img/Mate.png" alt="" />
+                <span>HUAWEI Mate系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/P.png" alt="" />
+                <span>HUAWEI P系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/nova.png" alt="" />
+                <span>HUAWEI Nova系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/畅享.png" alt="" />
+                <span>HUAWEI 畅享系列</span>
+              </div>
+              <div class="edge-nav-example">
+                <img src="img/二手.png" alt="" />
+                <span>HUAWEI认证二手机</span>
+              </div>
+              <div class="edge-nav-example">
+                <span
+                  >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看全部</span
+                >
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- 中导航栏 -->
+    <div class="nav-middle">
+      <div class="nav-middle-item">
+        <div class="nav-middle-item-img"><img src="img/1.png" alt="" /></div>
+        <div class="nav-middle-item-word">企业购</div>
+      </div>
+      <div class="nav-middle-item">
+        <div class="nav-middle-item-img"><img src="img/1.png" alt="" /></div>
+        <div class="nav-middle-item-word">智能家居</div>
+      </div>
+      <div class="nav-middle-item">
+        <div class="nav-middle-item-img"><img src="img/1.png" alt="" /></div>
+        <div class="nav-middle-item-word">以旧换新</div>
+      </div>
+      <div class="nav-middle-item">
+        <div class="nav-middle-item-img"><img src="img/1.png" alt="" /></div>
+        <div class="nav-middle-item-word">教育商店</div>
+      </div>
+      <div class="nav-middle-item">
+        <div class="nav-middle-item-img"><img src="img/1.png" alt="" /></div>
+        <div class="nav-middle-item-word">超新计划</div>
+      </div>
+      <div class="nav-middle-item">
+        <div class="nav-middle-item-img"><img src="img/1.png" alt="" /></div>
+        <div class="nav-middle-item-word">会员频道</div>
+      </div>
+      <div class="nav-middle-item">
+        <div class="nav-middle-item-img"><img src="img/1.png" alt="" /></div>
+        <div class="nav-middle-item-word">限时秒杀</div>
+      </div>
+    </div>
+    <!-- 新品 -->
+    <div class="new">
+      <div class="new-item-1"><img src="img/new-1.png" alt="" /></div>
+      <div class="new-item-2"><img src="img/new-2.png" alt="" /></div>
+      <div class="new-item-3"><img src="img/new-3.png" alt="" /></div>
+      <div class="new-item-4"><img src="img/new-4.png" alt="" /></div>
+    </div>
+    <!-- 限时购 -->
+    <div class="time">
+      <div class="time-head">
+        <div class="time-head-left">
+          <div class="time-head-left-1">限时购</div>
+          <div class="time-head-left-2">距结束</div>
+          <div class="time-head-left-3">
+            <img src="img/time.png" alt="" />
+          </div>
+        </div>
+        <div class="time-head-right">
+          <span class="time-head-right-1">限时秒杀</span>
+          <span class="iconfont icon-yousanjiao"></span>
+        </div>
+      </div>
+      <div class="time-item">
+        <div class="good-small-item">
+          <div class="good-img-small">
+            <img src="img/watch gt3.png" alt="" />
+          </div>
+          <div class="good-h1">HUAWEI WATCH GT 3</div>
+          <div class="good-h2">限时直降10元</div>
+          <div class="good-price">
+            <span class="good-price-now">￥1578</span>
+            <span class="good-price-origin">￥1588</span>
+          </div>
+        </div>
+        <div class="good-small-item">
+          <div class="good-img-small">
+            <img src="img/S24.png" alt="" />
+          </div>
+          <div class="good-h1">华为显示器 S24</div>
+          <div class="good-h2">限时直降200元</div>
+          <div class="good-price">
+            <span class="good-price-now">￥799</span>
+            <span class="good-price-origin">￥999</span>
+          </div>
+        </div>
+        <div class="good-small-item">
+          <div class="good-img-small">
+            <img src="img/freebuds 4.png" alt="" />
+          </div>
+          <div class="good-h1">HUAWEI FreeBuds 4</div>
+          <div class="good-h2">限时直降200元</div>
+          <div class="good-price">
+            <span class="good-price-now">￥799</span>
+            <span class="good-price-origin">￥999</span>
+          </div>
+        </div>     
+       <div class="good-small-item">
+          <div class="good-img-small">
+            <img src="img/watch gt3.png" alt="" />
+          </div>
+          <div class="good-h1">HUAWEI WATCH GT 3</div>
+          <div class="good-h2">限时直降10元</div>
+          <div class="good-price">
+            <span class="good-price-now">￥1578</span>
+            <span class="good-price-origin">￥1588</span>
+          </div>
+        </div>      
+       <div class="good-small-item">
+          <div class="good-img-small">
+            <img src="img/watch gt3.png" alt="" />
+          </div>
+          <div class="good-h1">HUAWEI WATCH GT 3</div>
+          <div class="good-h2">限时直降10元</div>
+          <div class="good-price">
+            <span class="good-price-now">￥1578</span>
+            <span class="good-price-origin">￥1588</span>
+          </div>
+        </div>     
+
+    </div>
+    <!-- 爆款推荐 -->
+    <div class="recommend-head">爆款推荐</div>
+    <div class="recommend">
+      <div class="main">
+        <img src="img/TV.png" alt="" height="306px" width="478px" />
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/watch gt3.png" alt="" />
+        </div>
+        <div class="good-h1">HUAWEI WATCH GT 3</div>
+        <div class="good-h2">限时直降10元</div>
+        <div class="good-price">
+          <span class="good-price-now">￥1578</span>
+        </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/S24.png" alt="" />
+        </div>
+        <div class="good-h1">华为显示器 S24</div>
+        <div class="good-h2">限时直降200元</div>
+        <div class="good-price">
+          <span class="good-price-now">￥799</span>
+        </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/freebuds 4.png" alt="" />
+        </div>
+        <div class="good-h1">HUAWEI FreeBuds 4</div>
+        <div class="good-h2">限时直降200元</div>
+        <div class="good-price">
+          <span class="good-price-now">￥799</span>
+        </div>
+      </div>     
+     <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/matepad pro 10.8.png" alt="" />
+        </div>
+        <div class="good-h1">MatePad Pro 10.8</div>
+        <div class="good-h2">立省200</div>
+        <div class="good-price">
+          <span class="good-price-now">￥4799</span>
+        </div>
+      </div>      
+     <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/watch gt3.png" alt="" />
+        </div>
+        <div class="good-h1">HUAWEI WATCH GT 3</div>
+        <div class="good-h2">限时直降10元</div>
+        <div class="good-price">
+          <span class="good-price-now">￥1578</span>
+          <span class="good-price-origin">￥1588</span>
+        </div>
+      </div>   
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/freebuds pro.png" alt="" />
+        </div>
+        <div class="good-h1">FreeBuds Pro 无线耳机</div>
+        <div class="good-h2">最高直降50元</div>
+        <div class="good-price">
+          <span class="good-price-now">￥869</span>
+        </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/matebook 13s.png" alt="" />
+        </div>
+        <div class="good-h1">MateBook 13s</div>
+        <div class="good-h2">限时降100元</div>
+        <div class="good-price">
+          <span class="good-price-now">￥6899</span>
+        </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/freebuds 4.png" alt="" />
+        </div>
+        <div class="good-h1">HUAWEI FreeBuds 4</div>
+        <div class="good-h2">限时直降200元</div>
+        <div class="good-price">
+          <span class="good-price-now">￥799</span>
+          <span class="good-price-origin">￥999</span>
+        </div>
+      </div>    
+    </div>
+    <!-- 中间广告 -->
+    <div class="ad-mid">
+      <img src="img/ADmid.png" alt="" height="120px" width="1226px">
+    </div>
+    <!-- 大图商品推荐 -->
+    <div class="recommend-head-2">
+      <div class="recommend-head-2-left">
+        <span>手机</span>
+        <span>智慧屏</span>
+        <span>笔记本</span>
+        <span>精品平板</span>
+        <span>台式机</span>
+        <span>显示器</span>
+        <span>电脑配件</span>
+      </div>
+      <div class="recommend-head-2-right">
+        <span>更多</span>
+        <span class="iconfont icon-yousanjiao"></span>
+      </div>
+    </div>
+    <div class="recommend">
+      <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/P.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            HUAWEI P50 Pro
+       </div>
+       <div class="good-h2">
+            万象双环设计，美学新生
+       </div>
+       <div class="good-price-now">
+         ￥7488
+       </div>
+       <div class="good-score">
+         赠送积分
+       </div>
+      </div>
+      <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/P.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            HUAWEI P50 Pro
+       </div>
+       <div class="good-h2">
+            万象双环设计，美学新生
+       </div>
+       <div class="good-price-now">
+         ￥7488
+       </div>
+       <div class="good-score">
+         赠送积分
+       </div>
+      </div>
+      <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/P.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            HUAWEI P50 Pro
+       </div>
+       <div class="good-h2">
+            万象双环设计，美学新生
+       </div>
+       <div class="good-price-now">
+         ￥7488
+       </div>
+       <div class="good-score">
+         赠送积分
+       </div>
+      </div>
+       <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/P.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            HUAWEI P50 Pro
+       </div>
+       <div class="good-h2">
+            万象双环设计，美学新生
+       </div>
+       <div class="good-price-now">
+         ￥7488
+       </div>
+       <div class="good-score">
+         赠送积分
+       </div>
+      </div>
+      <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/P.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            HUAWEI P50 Pro
+       </div>
+       <div class="good-h2">
+            万象双环设计，美学新生
+       </div>
+       <div class="good-price-now">
+         ￥7488
+       </div>
+       <div class="good-score">
+         赠送积分
+       </div>
+      </div> 
+      <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/P.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            HUAWEI P50 Pro
+       </div>
+       <div class="good-h2">
+            万象双环设计，美学新生
+       </div>
+       <div class="good-price-now">
+         ￥7488
+       </div>
+       <div class="good-score">
+         赠送积分
+       </div>
+      </div>    
+     <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/P.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            HUAWEI P50 Pro
+       </div>
+       <div class="good-h2">
+            万象双环设计，美学新生
+       </div>
+       <div class="good-price-now">
+         ￥7488
+       </div>
+       <div class="good-score">
+         赠送积分
+       </div>
+      </div>   
+      <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/P.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            HUAWEI P50 Pro
+       </div>
+       <div class="good-h2">
+            万象双环设计，美学新生
+       </div>
+       <div class="good-price-now">
+         ￥7488
+       </div>
+       <div class="good-score">
+         赠送积分
+       </div>
+      </div>
+    </div>
+    <!-- 大图商品推荐 -->
+    <div class="recommend-head-2">
+      <div class="recommend-head-2-left">
+        <span>智能穿戴&VR</span>
+        <span>智能手表</span>
+        <span>智能手环</span>
+        <span>耳机音箱眼镜</span>
+        <span>智能路由</span>
+      </div>
+      <div class="recommend-head-2-right">
+        <span>更多</span>
+        <span class="iconfont icon-yousanjiao"></span>
+      </div>
+    </div>
+    <div class="recommend">
+      <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/watch3 pro.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            WATCH 3 Pro
+       </div>
+       <div class="good-h2">
+            一表万象
+       </div>
+       <div class="good-price-now">
+         ￥3249 <span class="good-price-origin">3299</span>
+       </div>
+       <div class="good-bottom-big">
+        <div class="good-score">
+          限时特价
+        </div>
+        <div class="good-score">
+          分期免息
+        </div>
+        <div class="good-score">
+          赠送积分
+        </div>
+       </div>
+      </div>
+      <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/watch3 pro.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            WATCH 3 Pro
+       </div>
+       <div class="good-h2">
+            一表万象
+       </div>
+       <div class="good-price-now">
+         ￥3249 <span class="good-price-origin">3299</span>
+       </div>
+       <div class="good-bottom-big">
+        <div class="good-score">
+          限时特价
+        </div>
+        <div class="good-score">
+          分期免息
+        </div>
+        <div class="good-score">
+          赠送积分
+        </div>
+       </div>
+      </div>
+      <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/watch3 pro.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            WATCH 3 Pro
+       </div>
+       <div class="good-h2">
+            一表万象
+       </div>
+       <div class="good-price-now">
+         ￥3249 <span class="good-price-origin">3299</span>
+       </div>
+       <div class="good-bottom-big">
+        <div class="good-score">
+          限时特价
+        </div>
+        <div class="good-score">
+          分期免息
+        </div>
+        <div class="good-score">
+          赠送积分
+        </div>
+       </div>
+      </div>
+      <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/watch3 pro.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            WATCH 3 Pro
+       </div>
+       <div class="good-h2">
+            一表万象
+       </div>
+       <div class="good-price-now">
+         ￥3249 <span class="good-price-origin">3299</span>
+       </div>
+       <div class="good-bottom-big">
+        <div class="good-score">
+          限时特价
+        </div>
+        <div class="good-score">
+          分期免息
+        </div>
+        <div class="good-score">
+          赠送积分
+        </div>
+       </div>
+      </div>
+      <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/watch3 pro.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            WATCH 3 Pro
+       </div>
+       <div class="good-h2">
+            一表万象
+       </div>
+       <div class="good-price-now">
+         ￥3249 <span class="good-price-origin">3299</span>
+       </div>
+       <div class="good-bottom-big">
+        <div class="good-score">
+          限时特价
+        </div>
+        <div class="good-score">
+          分期免息
+        </div>
+        <div class="good-score">
+          赠送积分
+        </div>
+       </div>
+      </div>
+      <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/watch3 pro.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            WATCH 3 Pro
+       </div>
+       <div class="good-h2">
+            一表万象
+       </div>
+       <div class="good-price-now">
+         ￥3249 <span class="good-price-origin">3299</span>
+       </div>
+       <div class="good-bottom-big">
+        <div class="good-score">
+          限时特价
+        </div>
+        <div class="good-score">
+          分期免息
+        </div>
+        <div class="good-score">
+          赠送积分
+        </div>
+       </div>
+      </div>
+      <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/watch3 pro.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            WATCH 3 Pro
+       </div>
+       <div class="good-h2">
+            一表万象
+       </div>
+       <div class="good-price-now">
+         ￥3249 <span class="good-price-origin">3299</span>
+       </div>
+       <div class="good-bottom-big">
+        <div class="good-score">
+          限时特价
+        </div>
+        <div class="good-score">
+          分期免息
+        </div>
+        <div class="good-score">
+          赠送积分
+        </div>
+       </div>
+      </div>
+      <div class="good-big-item">
+        <div class="good-img-big">
+          <img src="img/watch3 pro.png" alt="">
+        </div>
+       <div class="good-h1">
+            <span class="good-h1-new">新品上市</span>
+            WATCH 3 Pro
+       </div>
+       <div class="good-h2">
+            一表万象
+       </div>
+       <div class="good-price-now">
+         ￥3249 <span class="good-price-origin">3299</span>
+       </div>
+       <div class="good-bottom-big">
+        <div class="good-score">
+          限时特价
+        </div>
+        <div class="good-score">
+          分期免息
+        </div>
+        <div class="good-score">
+          赠送积分
+        </div>
+       </div>
+      </div>
+    </div>
+    <!-- 生态精品推荐 -->
+    <div class="recommend-head-2">
+      <div class="recommend-head-2-left">
+        <span>生态精品</span>
+        <span>净化器</span>
+        <span>智能门锁</span>
+        <span>扫地清洁</span>
+        <span>智能水杯</span>
+        <span>影音娱乐</span>
+        <span>厨电卫浴</span>
+        <span>灯饰照明</span>
+        <span>摄像头</span>
+      </div>
+      <div class="recommend-head-2-right">
+        <span>更多</span>
+        <span class="iconfont icon-yousanjiao"></span>
+      </div>
+    </div>
+    <div class="recommend">
+      <div class="main">
+        <img src="img/tixudao.png" alt="" height="306px" width="478px" />
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/air cleaner.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">热销爆款</span>
+          无耗材空气净化器</div>
+        <div class="good-h2">限时直降700元</div>
+        <div class="good-price">
+          <span class="good-price-now">￥3599</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            限时特价
+          </div>
+          <div class="good-score">
+            分期免息
+          </div>
+          <div class="good-score">
+            赠送积分
+          </div>
+         </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/camera.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">华为智选</span>
+          海雀智能摄像头</div>
+        <div class="good-h2">超清画质</div>
+        <div class="good-price">
+          <span class="good-price-now">￥279</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            限时特价
+          </div>
+         </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/air cleaner.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">热销爆款</span>
+          无耗材空气净化器</div>
+        <div class="good-h2">限时直降700元</div>
+        <div class="good-price">
+          <span class="good-price-now">￥3599</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            限时特价
+          </div>
+          <div class="good-score">
+            分期免息
+          </div>
+          <div class="good-score">
+            赠送积分
+          </div>
+         </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/camera.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">华为智选</span>
+          海雀智能摄像头</div>
+        <div class="good-h2">超清画质</div>
+        <div class="good-price">
+          <span class="good-price-now">￥279</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            限时特价
+          </div>
+         </div>
+      </div>    
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/air cleaner.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">热销爆款</span>
+          无耗材空气净化器</div>
+        <div class="good-h2">限时直降700元</div>
+        <div class="good-price">
+          <span class="good-price-now">￥3599</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            限时特价
+          </div>
+          <div class="good-score">
+            分期免息
+          </div>
+          <div class="good-score">
+            赠送积分
+          </div>
+         </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/camera.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">华为智选</span>
+          海雀智能摄像头</div>
+        <div class="good-h2">超清画质</div>
+        <div class="good-price">
+          <span class="good-price-now">￥279</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            限时特价
+          </div>
+         </div>
+      </div>    
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/air cleaner.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">热销爆款</span>
+          无耗材空气净化器</div>
+        <div class="good-h2">限时直降700元</div>
+        <div class="good-price">
+          <span class="good-price-now">￥3599</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            限时特价
+          </div>
+          <div class="good-score">
+            分期免息
+          </div>
+          <div class="good-score">
+            赠送积分
+          </div>
+         </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/camera.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">华为智选</span>
+          海雀智能摄像头</div>
+        <div class="good-h2">超清画质</div>
+        <div class="good-price">
+          <span class="good-price-now">￥279</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            限时特价
+          </div>
+         </div>
+      </div>
+    </div>
+    <!-- 美食酒饮 -->
+    <div class="recommend-head-2">
+      <div class="recommend-head-2-left">
+        <span>美食酒饮</span>
+        <span>甄选美酒</span>
+        <span>严选食物</span>
+        <span>精选好物</span>
+      </div>
+      <div class="recommend-head-2-right">
+        <span>更多</span>
+        <span class="iconfont icon-yousanjiao"></span>
+      </div>
+    </div>
+    <div class="recommend">
+      <div class="main">
+        <img src="img/wuliangye.png" alt="" height="306px" width="478px" />
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/wine.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">热销爆款</span>
+          法国嘉宝酒庄红酒</div>
+        <div class="good-h2">每满300减40</div>
+        <div class="good-price">
+          <span class="good-price-now">￥138</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            下单满减
+          </div>
+        </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/rice.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">新品上市</span>
+          陆家村有机五常大米</div>
+        <div class="good-h2">2021年新米</div>
+        <div class="good-price">
+          <span class="good-price-now">￥199</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            下单满减
+          </div>
+        </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/wine.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">热销爆款</span>
+          法国嘉宝酒庄红酒</div>
+        <div class="good-h2">每满300减40</div>
+        <div class="good-price">
+          <span class="good-price-now">￥138</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            下单满减
+          </div>
+        </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/rice.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">新品上市</span>
+          陆家村有机五常大米</div>
+        <div class="good-h2">2021年新米</div>
+        <div class="good-price">
+          <span class="good-price-now">￥199</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            下单满减
+          </div>
+        </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/wine.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">热销爆款</span>
+          法国嘉宝酒庄红酒</div>
+        <div class="good-h2">每满300减40</div>
+        <div class="good-price">
+          <span class="good-price-now">￥138</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            下单满减
+          </div>
+        </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/rice.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">新品上市</span>
+          陆家村有机五常大米</div>
+        <div class="good-h2">2021年新米</div>
+        <div class="good-price">
+          <span class="good-price-now">￥199</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            下单满减
+          </div>
+        </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/wine.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">热销爆款</span>
+          法国嘉宝酒庄红酒</div>
+        <div class="good-h2">每满300减40</div>
+        <div class="good-price">
+          <span class="good-price-now">￥138</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            下单满减
+          </div>
+        </div>
+      </div>
+      <div class="good-small-item">
+        <div class="good-img-small">
+          <img src="img/rice.png" alt="" />
+        </div>
+        <div class="good-h1">
+          <span class="good-h1-new">新品上市</span>
+          陆家村有机五常大米</div>
+        <div class="good-h2">2021年新米</div>
+        <div class="good-price">
+          <span class="good-price-now">￥199</span>
+        </div>
+        <div class="good-bottom-small">
+          <div class="good-score">
+            下单满减
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 底部 -->
+    <div class="bottom">
+      <!-- 底部保证 -->
+      <div class="guarantee">
+        <div class="guarantee-item">
+          <img src="img/bottom-1.png" alt="">
+          <span>百强企业 品质保证</span>
+        </div>
+        <div class="guarantee-item">
+         <img src="img/bottom-2.png" alt="">
+          <span>7天退货 15天换货</span>
+        </div>
+        <div class="guarantee-item">
+          <img src="img/bottom-3.png" alt="">
+          <span>48元起免运费</span>
+        </div>
+        <div class="guarantee-item">
+          <img src="img/bottom-4.png" alt="">
+          <span>2000家服务店 全国联保</span>
+        </div>
+      </div>
+      <!-- 底部导航 -->
+      <div class="nav-bottom">
+        <div class="nav-bottom-item">
+          <p>购物指南</p>
+          <ul>
+            <li><a href="">免息分期</a></li>
+            <li><a href="">以旧换新</a></li>
+            <li><a href="">众测活动</a></li>
+            <li><a href="">企业购</a></li>
+            <li><a href="">O2O采购</a></li>
+          </ul>
+        </div>
+        <div class="nav-bottom-item">
+          <p>售后服务</p>
+          <ul>
+            <li><a href="">门店维修</a></li>
+            <li><a href="">保修政策</a></li>
+            <li><a href="">防伪查询</a></li>
+            <li><a href="">退换货政策</a></li>
+            <li><a href="">手机寄修服务</a></li>
+            <li><a href="">维修备件价格查询</a></li>
+          </ul>
+        </div>
+        <div class="nav-bottom-item">
+          <p>维修与技术支持</p>
+          <ul>
+            <li><a href="">服务店</a></li>
+            <li><a href="">预约维修</a></li>
+            <li><a href="">手机寄修</a></li>
+            <li><a href="">备件价格查询</a></li>
+            <li><a href="">上门服务</a></li>
+          </ul>
+        </div>
+        <div class="nav-bottom-item">
+          <p>特色服务</p>
+          <ul>
+            <li><a href="">防伪查询</a></li>
+            <li><a href="">补购保障</a></li>
+            <li><a href="">以旧换新</a></li>
+            <li><a href="">礼品包装</a></li>
+          </ul>
+        </div>
+        <div class="nav-bottom-item">
+          <p>关于我们</p>
+          <ul>
+            <li><a href="">公司介绍</a></li>
+            <li><a href="">华为零售店</a></li>
+            <li><a href="">商家中心</a></li>
+            <li><a href="">意见反馈</a></li>
+          </ul>
+        </div>
+        <div class="nav-bottom-item">
+          <p>友情连接 < ></p>
+          <ul>
+            <li><a href="">华为集团</a></li>
+            <li><a href="">华为CBG官网</a></li>
+            <li><a href="">花粉俱乐部</a></li>
+            <li><a href="">华为云</a></li>
+            <li><a href="">华为应用市场</a></li>
+          </ul>
+        </div>
+        <div class="nav-bottom-line"></div>
+        <div class="nav-bottom-right">
+          <p>950805</p>
+          <p>7 x 24小时客服热线（仅收市话费）</p>
+          <div class="online-service">
+            <span class="iconfont icon-kefu" style="font-size: 18px"></span>
+            <span>&nbsp;&nbsp;在线客服</span>
+
+          </div>
+          <p>关注Vmail：<img src="img/bottom-right.png" alt=""></p>
+        </div>
+      </div>
+      <!-- 最下执照 -->
+      <div class="bottom-last">
+        <p class="bottom-logo">
+          <a href="#"><img src="img/bottom-logo.png" alt="" ></a>
+        </p>
+        <div class="bottom-last-mid">
+          <ul class="bottom-list">
+            <li>
+              <a href="https://www.huawei.com/cn/">华为集团</a>
+            </li>
+            <li>
+              <a href="https://www.huawei.com/cn/">华为CBG官网</a>
+            </li>
+            <li>
+              <a href="https://www.huawei.com/cn/">花粉俱乐部</a>
+            </li>
+            <li>
+              <a href="https://www.huawei.com/cn/">华为应用市场</a>
+            </li>
+            <li>
+              <a href="https://www.huawei.com/cn/">HarmonyOS</a>
+            </li>
+            <li>
+              <a href="https://www.huawei.com/cn/">华为终端云空间</a>
+            </li>
+            <li>
+              <a href="https://www.huawei.com/cn/">开发者联盟</a>
+            </li>
+            <li>
+              <a href="https://www.huawei.com/cn/">华为商城手机版</a>
+            </li>
+            <li>
+              <a href="https://www.huawei.com/cn/">网站地图</a>
+            </li>
+          </ul>
+          <a href="">隐私声明</a>
+          <a href="">服务协议</a>
+          <a href="">COOKIES</a>
+          <span>Copyright © 2012-2021 华为终端有限公司 版权所有</span>
+          <a href="">粤ICP备19015064号</a>
+          <span>|</span>
+          <a href="">粤公网安备 44190002003939号</a>
+          <br>
+          <span>增值电信业务经营许可证：粤B2-20190762|备案主体编号：44201919072182|粤新出网备（2021）2号</span>
+          <br>
+          <a href="">互联网药品信息服务资格证（粤）-非经营性-2020-0102 </a>
+          <span> | 粤东食药监械经营备20203930 | 广东省网络食品交易第三方平台备案：GDWS10168</span>
+        </div>
+        <p class="bottom-licence">
+          <a href="https://res3.vmallres.com/shopdc/pic/5a818c14-f886-41b6-ad48-56c94a430471.jpg"><img src="img/licence.png" alt=""></a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
